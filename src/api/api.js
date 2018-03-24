@@ -17,7 +17,7 @@ class Api {
   // }
 
   getMeetupData = (eventName, accessToken, cb) => {
-    const url = `https://api.meetup.com/${eventName}/events`;
+    const url = `https://api.meetup.com/${eventName}/events?&sign=true&photo-host=public&page=1`;
     console.log('URL', url);
     console.log('TOKEN', accessToken)
     return fetch(url, {

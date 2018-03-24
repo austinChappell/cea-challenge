@@ -29,7 +29,7 @@ class EventDetails extends Component {
 } 
 
 const mapStateToProps = state => ({
-  accessToken: state.generalReducer.userAccessToken,
+  accessToken: state.generalReducer.accessToken,
 });
 
 export default connect(mapStateToProps)(EventDetails);

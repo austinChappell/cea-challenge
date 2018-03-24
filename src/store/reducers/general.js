@@ -1,5 +1,5 @@
 const initialState = {
-  accessToken: 'ff6d9244375add0e9c7d4bb291d68e54',
+  accessToken: null,
 };
 
 const reducer = (state = initialState, action) => {

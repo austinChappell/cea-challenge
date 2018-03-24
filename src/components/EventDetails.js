@@ -22,9 +22,11 @@ class EventDetails extends Component {
   }
 
   loadPage = () => {
-    const authorized = this.props.accessToken ? true : false;
+    const { accessToken } = this.props;
+    console.log('ACCESS TOKEN', accessToken)
+    const authorized = accessToken ? true : false;
     if (authorized) {
-      getMeetupData('reactjs-dallas', this.loadData)
+      getMeetupData('reactjs-dallas', accessToken, this.loadData)
     }
     this.setState({ authorized })
   }

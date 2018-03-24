@@ -16,11 +16,13 @@ class Api {
   //   })
   // }
 
-  getMeetupData = (eventName, cb) => {
+  getMeetupData = (eventName, accessToken, cb) => {
     const url = `https://api.meetup.com/${eventName}/events`;
+    console.log('URL', url);
+    console.log('TOKEN', accessToken)
     return fetch(url, {
       headers: {
-        Authorization: `Bearer ${process.env.REACT_APP_MEETUP_KEY}`,
+        Authorization: `Bearer ${accessToken}`,
         'Content-Type': 'application/json',
       },
     }).then((response) => {

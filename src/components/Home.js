@@ -28,7 +28,7 @@ class Home extends Component {
       : <a href={meetupAuthUrl}>Enter ReactJS Dallas</a>;
 
     return (
-      <div className="Home">
+      <div className="Home page">
         Home Component
         {link}
       </div>

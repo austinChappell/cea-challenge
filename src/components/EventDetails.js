@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router';
 
+import Api from '../api/api';
+
+const api = new Api();
+
+const { getMeetupData } = api;
+
 class EventDetails extends Component {
   state = {
     authorized: false,
@@ -11,8 +17,15 @@ class EventDetails extends Component {
     this.loadPage();
   }
 
+  loadData = (data) => {
+    console.log('DATA', data)
+  }
+
   loadPage = () => {
     const authorized = this.props.accessToken ? true : false;
+    if (authorized) {
+      getMeetupData('reactjs-dallas', this.loadData)
+    }
     this.setState({ authorized })
   }
 

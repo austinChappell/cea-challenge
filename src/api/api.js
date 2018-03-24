@@ -21,6 +21,7 @@ class Api {
     console.log('URL', url);
     console.log('TOKEN', accessToken)
     return fetch(url, {
+      credentials: 'include',
       headers: {
         Authorization: `Bearer ${accessToken}`,
         'Content-Type': 'application/json',

@@ -3,7 +3,8 @@ body {
   body * {
     color: #090909;
     font-size: 10px;
-    font-family: sans-serif; }
+    font-family: sans-serif;
+    margin: 0; }
 
 h1 {
   font-size: 3rem; }
@@ -17,6 +18,12 @@ h3 {
 h4 {
   font-size: 1.5rem; }
 
+h5 {
+  font-size: 1.3rem; }
+
+h6 {
+  font-size: 1rem; }
+
 .page {
   display: flex;
   flex-direction: column;
@@ -24,6 +31,36 @@ h4 {
 
 .Banner {
   background-color: #ff383f;
-  text-align: center; }
+  text-align: center;
+  padding: 20px; }
   .Banner * {
     color: #fafafa; }
+
+.Card {
+  box-shadow: 2px 2px 8px #090909;
+  box-sizing: border-box;
+  padding: 15px;
+  flex-basis: 40%;
+  margin: 5%; }
+
+.CountDown {
+  display: flex;
+  justify-content: center; }
+  .CountDown .time-block {
+    background-color: #090909;
+    margin: 10px 5px;
+    border: 1px solid #fafafa;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px; }
+    .CountDown .time-block * {
+      margin: 0; }
+
+.Event h4 {
+  margin-bottom: 10px; }
+
+.Group .events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch; }

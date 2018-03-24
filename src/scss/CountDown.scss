@@ -1,0 +1,15 @@
+.CountDown {
+  display: flex;
+  justify-content: center;
+  .time-block {
+    background-color: $color-black;
+    margin: 10px 5px;
+    border: 1px solid $color-white;
+    border-radius: $standard-border-radius;
+    box-sizing: border-box;
+    padding: 10px;
+    * {
+      margin: 0;
+    }
+  }
+}

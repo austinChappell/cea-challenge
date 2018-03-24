@@ -4,6 +4,7 @@ $color-tertiary: #a0a0a0;
 $color-neutral: #efefef;
 $color-white: #fafafa;
 $color-black: #090909;
+$standard-border-radius: 5px;
 
 body {
   margin: 0;
@@ -11,6 +12,7 @@ body {
     color: $color-black;
     font-size: 10px;
     font-family: sans-serif;
+    margin: 0;
   }
 }
 
@@ -30,6 +32,14 @@ h4 {
   font-size: 1.5rem;
 }
 
+h5 {
+  font-size: 1.3rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
 .page {
   display: flex;
   flex-direction: column;
@@ -37,3 +47,7 @@ h4 {
 }
 
 @import './Banner';
+@import './Card';
+@import './CountDown';
+@import './Event';
+@import './Group';

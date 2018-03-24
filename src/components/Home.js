@@ -1,9 +1,22 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 class Home extends Component {
   componentWillMount() {
-    console.log('PROPS', this.props.match);
+    if (!this.props.accessToken) {
+      const { hash } = this.props.location;
+      if (hash.indexOf('access_token=') > -1) {
+        // split the url query string on "access_token="
+        const splitHash = hash.split('access_token=');
+
+        // split the other query params off and return only the token
+        const accessToken = splitHash[1].split('&')[0];
+
+        // save accessToken to Redux
+        this.props.setAccessToken(accessToken);
+      }
+    }
   }
 
   render() {
@@ -23,4 +36,15 @@ class Home extends Component {
   }
 }
 
-export default Home;
+const mapStateToProps = state => ({
+  accessToken: state.generalReducer.accessToken,
+});
+
+const mapDispatchToProps = dispatch => ({
+  setAccessToken: (accessToken) => {
+    const action = { type: 'SET_ACCESS_TOKEN', accessToken };
+    dispatch(action);
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

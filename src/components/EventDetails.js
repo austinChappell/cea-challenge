@@ -9,7 +9,6 @@ class EventDetails extends Component {
 
   componentWillMount() {
     this.loadPage();
-    console.log('PROPS', this.props.match)
   }
 
   loadPage = () => {

@@ -1,11 +1,11 @@
 const initialState = {
-  userAccessToken: null,
+  accessToken: null,
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'SET_ACCESS_TOKEN':
-      return Object.assign({}, initialState, { userAccessToken: action.userAccessToken });
+      return Object.assign({}, initialState, { accessToken: action.accessToken });
     default:
       return state;
   }

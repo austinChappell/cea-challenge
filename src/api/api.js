@@ -17,13 +17,11 @@ class Api {
   // }
 
   getMeetupData = (eventName, accessToken, cb) => {
-    const url = `https://api.meetup.com/${eventName}/events?&sign=true&photo-host=public&page=1`;
+    const url = `https://api.meetup.com/${eventName}/events?&sign=true&photo-host=public&page=1&access_token=${accessToken}`;
     console.log('URL', url);
     console.log('TOKEN', accessToken)
     return fetch(url, {
-      credentials: 'include',
       headers: {
-        Authorization: `Bearer ${accessToken}`,
         'Content-Type': 'application/json',
       },
     }).then((response) => {

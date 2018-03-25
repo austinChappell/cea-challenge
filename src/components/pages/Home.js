@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 const myMeetups = [
@@ -14,6 +14,11 @@ const myMeetups = [
 ];
 
 class Home extends Component {
+
+  state = {
+    redirect: false,
+  }
+
   componentWillMount() {
     if (!this.props.accessToken) {
       const { hash } = this.props.location;
@@ -30,6 +35,16 @@ class Home extends Component {
     }
   }
 
+  componentWillUpdate(nextProps) {
+    if (this.props.accessToken !== nextProps.accessToken) {
+      this.setRedirect();
+    }
+  }
+
+  setRedirect = () => {
+    this.setState({ redirect: true })
+  }
+
   storeGroupUrl = (url) => {
     console.log('URL', url)
     sessionStorage.setItem('groupUrl', url);
@@ -39,8 +54,9 @@ class Home extends Component {
     const { accessToken } = this.props;
     const meetupAuthUrl = `https://secure.meetup.com/oauth2/authorize?client_id=${process.env.REACT_APP_MEETUP_CONSUMER_KEY}&response_type=token&redirect_uri=${process.env.REACT_APP_MEETUP_REDIRECT_URI}`;
     const groupUrl = sessionStorage.getItem('groupUrl');
+    console.log('REDIRECT', this.state.redirect)
 
-    const link = accessToken ?
+    const link = accessToken && this.state.redirect ?
       <Redirect to={`/group/${groupUrl}`} />
       : <a href={meetupAuthUrl}>Enter ReactJS Dallas</a>;
 
@@ -49,9 +65,13 @@ class Home extends Component {
         Home Component
         {link}
         {myMeetups.map((meetup, index) => {
-          const meetupLink = accessToken ?
+          const redirectLink = accessToken ? 
+            <Link to={`/group/${meetup.url}`} />
+            : 
+            <a href={meetupAuthUrl} onClick={() => this.storeGroupUrl(meetup.url)}>{meetup.title}</a>;
+          const meetupLink = this.state.redirect ?
             <Redirect to={`/group/${sessionStorage.groupUrl}`} />
-            : <a href={meetupAuthUrl} onClick={() => this.storeGroupUrl(meetup.url)}>{meetup.title}</a>;
+            : redirectLink;
 
           return (
             <div key={index}>

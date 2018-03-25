@@ -1,5 +1,5 @@
 const initialState = {
-  accessToken: null,
+  accessToken: 'asdf',
 };
 
 const reducer = (state = initialState, action) => {

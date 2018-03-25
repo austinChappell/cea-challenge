@@ -49,7 +49,7 @@ class Home extends Component {
         {link}
         {myMeetups.map((meetup, index) => {
           const meetupLink = accessToken ?
-            <Redirect to={'/group/${meetup.url}'} />
+            <Redirect to={`/group/${meetup.url}`} />
             : <a href={meetupAuthUrl} onClick={() => this.storeGroupUrl(meetup.url)}>{meetup.title}</a>;
 
           return (

@@ -21,7 +21,7 @@ h4 {
 h5 {
   font-size: 1.3rem; }
 
-h6 {
+h6, p {
   font-size: 1rem; }
 
 .page {
@@ -57,6 +57,7 @@ h6 {
       margin: 0; }
 
 .Event h4 {
+  color: #7A9EA5;
   margin-bottom: 10px; }
 
 .Event h6 {
@@ -80,3 +81,18 @@ h6 {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch; }
+
+.MemberCarousel .slider {
+  display: flex;
+  overflow: auto;
+  text-align: center;
+  align-items: stretch; }
+  .MemberCarousel .slider .member {
+    min-width: 100px; }
+    .MemberCarousel .slider .member .avatar {
+      margin: 10px auto;
+      border-radius: 50%;
+      height: 80px;
+      width: 80px; }
+    .MemberCarousel .slider .member img {
+      border-radius: 50%; }

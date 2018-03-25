@@ -54,17 +54,26 @@ class Group extends Component {
   selectEvent = (selectedEvent) => {
     const { id, group } = selectedEvent;
     const selectedEventURL = `/group/${group.urlname}/event/${id}`;
+    this.props.selectEvent(selectedEvent);
     this.props.history.push(selectedEventURL)
   }
 
   render() {
     console.log('GROUP COMPONENT STATE', this.state)
+    const { group } = this.state;
+    const countDownMessage = `Until the next ${group.name} Meetup`;
     const firstEvent = this.state.events[0];
+    const startYear = new Date(group.created).getFullYear();
 
     return (
       <div className="Group page">
         <RouteRestrictor />
-        <Banner group={this.state.group} nextEventTime={firstEvent ? firstEvent.time : null} />
+        <Banner
+          countDownMessage={countDownMessage}
+          nextEventTime={firstEvent ? firstEvent.time : null}
+          subTitle={`Devvin' it up since ${startYear}`}
+          title={this.state.group.name}
+        />
         <div className="events">
           {this.state.events.map((event, index) => {
             return (
@@ -85,4 +94,11 @@ const mapStateToProps = state => ({
   accessToken: state.generalReducer.accessToken,
 });
 
-export default connect(mapStateToProps)(Group);
+const mapDispatchToProps = dispatch => ({
+  selectEvent: (selectedEvent) => {
+    const action = { type: 'SELECT_EVENT', selectedEvent };
+    dispatch(action);
+  }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Group);

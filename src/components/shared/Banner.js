@@ -4,17 +4,22 @@ import CountDown from './CountDown';
 
 const Banner = (props) => {
   const {
-    group,
+    countDownMessage,
     nextEventTime,
+    subTitle,
+    title,
   } = props;
-  const startYear = new Date(group.created).getFullYear();
+
   return (
     <div className="Banner">
       <h1>
-        {group.name}
+        {title}
       </h1>
-      <h4>Devvin' it up since {startYear}</h4>
-      <CountDown eventTime={nextEventTime} message={`Until the next ${group.name} MeetUp!`} />
+      <h4>{subTitle}</h4>
+      <CountDown
+        eventTime={nextEventTime}
+        message={countDownMessage}
+      />
     </div>
   );
 };

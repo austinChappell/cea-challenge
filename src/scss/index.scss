@@ -1,7 +1,9 @@
 $color-primary: #ff383f;
 $color-primary-dark: #BF2A2F;
 $color-primary-light: #FF7E81;
-$color-secondary: #caebf2;
+$color-secondary-light: #CAEBF2;
+$color-secondary: #83E0F4;
+$color-secondary-dark: #7A9EA5;
 $color-tertiary: #a0a0a0;
 $color-neutral: #efefef;
 $color-white: #fafafa;
@@ -38,7 +40,7 @@ h5 {
   font-size: 1.3rem;
 }
 
-h6 {
+h6, p {
   font-size: 1rem;
 }
 
@@ -53,3 +55,4 @@ h6 {
 @import './CountDown';
 @import './Event';
 @import './Group';
+@import './MemberCarousel';

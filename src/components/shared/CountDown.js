@@ -21,6 +21,10 @@ class CountDown extends Component {
     this.startTimer();
   }
 
+  componentWillUnmount() {
+    clearInterval(this.stopTimer);
+  }
+
   getTime = () => {
     const { eventTime } = this.props;
     const time = getTimerDisplay(eventTime);
@@ -29,7 +33,7 @@ class CountDown extends Component {
 
   startTimer = () => {
     this.getTime();
-    setInterval(() => {
+    this.stopTimer = setInterval(() => {
       this.getTime();
     }, 1000);
   }

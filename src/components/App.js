@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
@@ -8,23 +8,18 @@ import EventDetails from './pages/EventDetails';
 import Group from './pages/Group';
 import Home from './pages/Home';
 
-class App extends Component {
-  render() {
-    console.log(process.env.NODE_ENV);
-    return (
-      <div className="App">
-        <Provider store={store}>
-          <Router>
-            <Switch>
-              <Route path="/group/:name/event/:eventId" component={EventDetails} />
-              <Route path="/group" component={Group} />
-              <Route path="/" component={Home} />
-            </Switch>
-          </Router>
-        </Provider>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div className="App">
+    <Provider store={store}>
+      <Router>
+        <Switch>
+          <Route path="/group/:groupName/event/:eventId" component={EventDetails} />
+          <Route path="/group" component={Group} />
+          <Route path="/" component={Home} />
+        </Switch>
+      </Router>
+    </Provider>
+  </div>
+);
 
 export default App;

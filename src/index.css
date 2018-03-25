@@ -41,7 +41,7 @@ h6, p {
   box-sizing: border-box;
   padding: 15px;
   flex-basis: 40%;
-  margin: 5%; }
+  margin: 15px; }
 
 .CountDown {
   display: flex;
@@ -79,8 +79,10 @@ h6, p {
 .Group .events {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: stretch; }
+  .Group .events > div {
+    flex-grow: 1;
+    min-width: 300px; }
 
 .MemberCarousel .slider {
   display: flex;

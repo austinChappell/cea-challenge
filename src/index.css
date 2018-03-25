@@ -88,6 +88,15 @@ h6, p {
     flex-grow: 1;
     min-width: 300px; }
 
+.Home {
+  background: linear-gradient(#292929, #CAEBF2);
+  text-align: center; }
+  .Home h1 {
+    color: #ff383f;
+    margin-top: 20vh; }
+  .Home a {
+    color: #fafafa; }
+
 .MemberCarousel .slider {
   display: flex;
   overflow: auto;

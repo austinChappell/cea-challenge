@@ -1,0 +1,11 @@
+.Home {
+  background: linear-gradient($color-black, $color-secondary-light);
+  text-align: center;
+  h1 {
+    color: $color-primary;
+    margin-top: 20vh;
+  }
+  a {
+    color: $color-white;
+  }
+}

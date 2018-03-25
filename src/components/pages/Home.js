@@ -47,7 +47,6 @@ class Home extends Component {
   }
 
   storeGroupUrl = (url) => {
-    console.log('URL', url)
     sessionStorage.setItem('groupUrl', url);
   }
 
@@ -55,28 +54,25 @@ class Home extends Component {
     const { accessToken } = this.props;
     const meetupAuthUrl = `https://secure.meetup.com/oauth2/authorize?client_id=${process.env.REACT_APP_MEETUP_CONSUMER_KEY}&response_type=token&redirect_uri=${process.env.REACT_APP_MEETUP_REDIRECT_URI}`;
     const groupUrl = sessionStorage.getItem('groupUrl');
-    console.log('REDIRECT', this.state.redirect)
-
-    const link = accessToken && this.state.redirect ?
-      <Redirect to={`/group/${groupUrl}`} />
-      : <a href={meetupAuthUrl}>Enter ReactJS Dallas</a>;
 
     return (
       <div className="Home page">
-        Home Component
-        {link}
+        <h1>Austin's Favorite Meetups</h1>
         {myMeetups.map((meetup, index) => {
-          console.log('MEETUP', meetup)
+
+          // if there is no token, clicking a link will prompt
+          // user to sign in to meetup.com
           const redirectLink = accessToken ? 
             <Link to={`/group/${meetup.url}`}>{meetup.title}</Link>
             : 
             <a href={meetupAuthUrl} onClick={() => this.storeGroupUrl(meetup.url)}>{meetup.title}</a>;
+
+          // if redirect is true, then redirecto the the group
+          // found in session storage
+          // redirect is true if access token is in url
           const meetupLink = this.state.redirect ?
             <Redirect to={`/group/${sessionStorage.groupUrl}`} />
             : redirectLink;
-
-          console.log('REDIRECT LINK', redirectLink)
-          console.log('MEETUP LINK', meetupLink)
 
           return (
             <div key={index}>

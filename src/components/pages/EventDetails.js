@@ -52,7 +52,7 @@ class EventDetails extends Component {
           <h4>Where:</h4>
           <div>
             <p>
-              {selectedEvent.venue.name}
+              {selectedEvent.venue ? selectedEvent.venue.name : 'TBD'}
             </p>
           </div>
         </div>

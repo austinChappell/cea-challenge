@@ -31,6 +31,7 @@ class Home extends Component {
 
         // save accessToken to Redux
         this.props.setAccessToken(accessToken);
+        this.setRedirect();
       }
     }
   }

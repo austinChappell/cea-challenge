@@ -4,7 +4,10 @@ import moment from 'moment';
 import Card from './Card';
 
 const Event = (props) => {
-  const { event } = props;
+  const {
+    event,
+    selectEvent,
+  } = props;
   const {
     rsvp_limit: rsvpLimit,
     name,
@@ -18,7 +21,7 @@ const Event = (props) => {
         <h6>{moment(time).format('MMMM Do YYYY, h:mm a')}</h6>
         <h6>{rsvp} going</h6>
         <h6>{rsvpLimit - rsvp} spots remaining</h6>
-        <button>
+        <button onClick={() => selectEvent(event)}>
           Learn More
         </button>
       </div>

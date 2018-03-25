@@ -18,10 +18,11 @@ class Group extends Component {
     authorized: false,
     events: [],
     group: '',
+    selectedEvent: null,
   }
 
   componentWillMount() {
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.REACT_APP_ENV === 'development') {
       this.loadMockData()
     } else {
       this.loadPage();
@@ -41,29 +42,37 @@ class Group extends Component {
   loadPage = () => {
     const { accessToken } = this.props;
     const authorized = accessToken ? true : false;
-    if (authorized && process.env.NODE_ENV !== 'development') {
+    if (authorized && process.env.REACT_APP_ENV !== 'development') {
       getMeetupData('reactjs-dallas', accessToken, this.loadData)
     }
     this.setState({ authorized })
   }
 
   setGroupInfo = (group) => {
-    console.log('GROUP', group)
     this.setState({ group })
+  }
+
+  selectEvent = (selectedEvent) => {
+    this.setState({ selectedEvent })
   }
 
   render() {
     console.log('GROUP COMPONENT STATE', this.state)
     const authCheck = this.state.authorized ? null : <Redirect to="/" />
+    const firstEvent = this.state.events[0];
 
     return (
       <div className="Group page">
         {authCheck}
-        <Banner group={this.state.group} nextEventTime={this.state.events[0].time} />
+        <Banner group={this.state.group} nextEventTime={firstEvent ? firstEvent.time : null} />
         <div className="events">
           {this.state.events.map((event, index) => {
             return (
-              <Event key={index} event={event} />
+              <Event
+                key={index}
+                event={event}
+                selectEvent={this.selectEvent}
+              />
             )
           })}
         </div>

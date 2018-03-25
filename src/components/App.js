@@ -14,7 +14,7 @@ const App = () => (
       <Router>
         <Switch>
           <Route path="/group/:groupName/event/:eventId" component={EventDetails} />
-          <Route path="/group" component={Group} />
+          <Route path="/group/:groupName" component={Group} />
           <Route path="/" component={Home} />
         </Switch>
       </Router>

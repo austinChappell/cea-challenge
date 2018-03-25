@@ -21,6 +21,9 @@ class Group extends Component {
   }
 
   componentWillMount() {
+    const { match } = this.props;
+    const { groupName } = match.params;
+    console.log('MATCH ', groupName)
     if (process.env.REACT_APP_ENV === 'development') {
       this.loadMockData()
     } else {
@@ -39,10 +42,11 @@ class Group extends Component {
   }
 
   loadPage = () => {
-    const { accessToken } = this.props;
+    const { accessToken, match } = this.props;
+    const { groupName } = match.params;
     const authorized = accessToken ? true : false;
     if (authorized && process.env.REACT_APP_ENV !== 'development') {
-      getMeetupData('reactjs-dallas', accessToken, this.loadData)
+      getMeetupData(groupName, accessToken, this.loadData)
     }
     this.setState({ authorized })
   }

@@ -24,7 +24,7 @@ class Home extends Component {
     const meetupAuthUrl = `https://secure.meetup.com/oauth2/authorize?client_id=${process.env.REACT_APP_MEETUP_CONSUMER_KEY}&response_type=token&redirect_uri=${process.env.REACT_APP_MEETUP_REDIRECT_URI}`;
 
     const link = accessToken ?
-      <Redirect to="/event_details" />
+      <Redirect to="/group" />
       : <a href={meetupAuthUrl}>Enter ReactJS Dallas</a>;
 
     return (

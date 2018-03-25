@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 
 import store from '../store/reducers/';
 
+import EventDetails from './pages/EventDetails';
 import Group from './pages/Group';
 import Home from './pages/Home';
 
@@ -15,7 +16,8 @@ class App extends Component {
         <Provider store={store}>
           <Router>
             <Switch>
-              <Route path="/event_details" component={Group} />
+              <Route path="/group" component={Group} />
+              <Route path="/event/:id" component={EventDetails} />
               <Route path="/" component={Home} />
             </Switch>
           </Router>

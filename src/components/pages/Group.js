@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router';
 import moment from 'moment';
 
 import Api from '../../api/api';
@@ -8,6 +7,7 @@ import mockData from '../../data/data';
 
 import Banner from '../shared/Banner';
 import Event from '../shared/Event';
+import RouteRestrictor from '../shared/RouteRestrictor';
 
 const api = new Api();
 
@@ -53,17 +53,18 @@ class Group extends Component {
   }
 
   selectEvent = (selectedEvent) => {
+    const { id } = selectedEvent;
+    console.log('ID', id)
     this.setState({ selectedEvent })
   }
 
   render() {
     console.log('GROUP COMPONENT STATE', this.state)
-    const authCheck = this.state.authorized ? null : <Redirect to="/" />
     const firstEvent = this.state.events[0];
 
     return (
       <div className="Group page">
-        {authCheck}
+        <RouteRestrictor />
         <Banner group={this.state.group} nextEventTime={firstEvent ? firstEvent.time : null} />
         <div className="events">
           {this.state.events.map((event, index) => {

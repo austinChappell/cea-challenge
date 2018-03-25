@@ -16,10 +16,7 @@ class Api {
   //   })
   // }
 
-  getMeetupData = (eventName, accessToken, cb) => {
-    const url = `https://api.meetup.com/${eventName}/events?&sign=true&photo-host=public&access_token=${accessToken}`;
-    console.log('URL', url);
-    console.log('TOKEN', accessToken)
+  get = (url, cb) => {
     return fetch(url, {
       headers: {
         'Content-Type': 'application/json',
@@ -33,6 +30,16 @@ class Api {
     }).catch((err) => {
       throw err;
     })
+  }
+
+  getMeetupData = (eventName, accessToken, cb) => {
+    const url = `https://api.meetup.com/${eventName}/events?&sign=true&photo-host=public&access_token=${accessToken}`;
+    this.get(url, cb)
+  }
+
+  getMeetupEvent = (groupName, eventId, accessToken, cb) => {
+    const url = `https://api.meetup.com/${groupName}/events/${eventId}/rsvps?&sign=true&photo-host=public&access_token=${accessToken}`;
+    this.get(url, cb)
   }
 }
 

@@ -2,6 +2,11 @@
   background-color: $color-primary;
   text-align: center;
   padding: 20px;
+  .go-back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
   * {
     color: $color-white;
   }

@@ -23,7 +23,6 @@ class Group extends Component {
   componentWillMount() {
     const { match } = this.props;
     const { groupName } = match.params;
-    console.log('MATCH ', groupName)
     if (process.env.REACT_APP_ENV === 'development') {
       this.loadMockData()
     } else {
@@ -63,7 +62,6 @@ class Group extends Component {
   }
 
   render() {
-    console.log('GROUP COMPONENT STATE', this.state)
     const { group } = this.state;
     const countDownMessage = `Until the next ${group.name} Meetup`;
     const firstEvent = this.state.events[0];
@@ -74,6 +72,9 @@ class Group extends Component {
         <RouteRestrictor />
         <Banner
           countDownMessage={countDownMessage}
+          goBackButton
+          goBackRoute="/"
+          goBackText="Back to Home Page"
           nextEventTime={firstEvent ? firstEvent.time : null}
           subTitle={`Devvin' it up since ${startYear}`}
           title={this.state.group.name}

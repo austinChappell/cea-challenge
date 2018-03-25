@@ -33,6 +33,10 @@ h6, p {
   background-color: #ff383f;
   text-align: center;
   padding: 20px; }
+  .Banner .go-back {
+    position: absolute;
+    top: 10px;
+    left: 10px; }
   .Banner * {
     color: #fafafa; }
 

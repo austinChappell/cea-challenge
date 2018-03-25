@@ -31,6 +31,7 @@ class Home extends Component {
   }
 
   storeGroupUrl = (url) => {
+    console.log('URL', url)
     sessionStorage.setItem('groupUrl', url);
   }
 
@@ -49,7 +50,7 @@ class Home extends Component {
         {link}
         {myMeetups.map((meetup, index) => {
           const meetupLink = accessToken ?
-            <Redirect to={`/group/${meetup.url}`} />
+            <Redirect to={`/group/${sessionStorage.groupUrl}`} />
             : <a href={meetupAuthUrl} onClick={() => this.storeGroupUrl(meetup.url)}>{meetup.title}</a>;
 
           return (

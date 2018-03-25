@@ -47,19 +47,19 @@ class CountDown extends Component {
       <Fragment>
         <div className="CountDown">
           <div className="time-block">
-            <h4>{isNaN(days) ? 0 : days}</h4>
+            <h4>{isNaN(days) ? '--' : days}</h4>
             <span>Days</span>
           </div>
           <div className="time-block">
-            <h4>{isNaN(hours) ? 0 : hours}</h4>
+            <h4>{isNaN(hours) ? '--' : hours}</h4>
             <span>Hours</span>
           </div>
           <div className="time-block">
-            <h4>{isNaN(minutes) ? 0 : minutes}</h4>
+            <h4>{isNaN(minutes) ? '--' : minutes}</h4>
             <span>Minutes</span>
           </div>
           <div className="time-block">
-            <h4>{isNaN(seconds) ? 0 : seconds}</h4>
+            <h4>{isNaN(seconds) ? '--' : seconds}</h4>
             <span>Seconds</span>
           </div>
         </div>

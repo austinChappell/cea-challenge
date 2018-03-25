@@ -18,7 +18,6 @@ class Group extends Component {
     authorized: false,
     events: [],
     group: '',
-    selectedEvent: null,
   }
 
   componentWillMount() {
@@ -53,9 +52,9 @@ class Group extends Component {
   }
 
   selectEvent = (selectedEvent) => {
-    const { id } = selectedEvent;
-    console.log('ID', id)
-    this.setState({ selectedEvent })
+    const { id, group } = selectedEvent;
+    const selectedEventURL = `/group/${group.urlname}/event/${id}`;
+    this.props.history.push(selectedEventURL)
   }
 
   render() {

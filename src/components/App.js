@@ -16,8 +16,8 @@ class App extends Component {
         <Provider store={store}>
           <Router>
             <Switch>
+              <Route path="/group/:name/event/:eventId" component={EventDetails} />
               <Route path="/group" component={Group} />
-              <Route path="/event/:id" component={EventDetails} />
               <Route path="/" component={Home} />
             </Switch>
           </Router>

@@ -4,8 +4,9 @@ import { connect } from 'react-redux';
 import moment from 'moment-timezone';
 
 import Banner from '../shared/Banner';
-import MemberCarousel from '../shared/MemberCarousel';
+import Card from '../shared/Card';
 import RouteRestrictor from '../shared/RouteRestrictor';
+import SliderCarousel from '../shared/SliderCarousel';
 
 import Api from '../../api/api';
 import mockEventData from '../../data/event_data';
@@ -58,29 +59,43 @@ class EventDetails extends Component {
           nextEventTime={selectedEvent.time}
           subTitle={selectedEvent.name}
         />
-        <div>
-          <h4>Where:</h4>
+        <div className="details">
           <div>
-            <p>
-              {selectedEvent.venue ? selectedEvent.venue.name : 'TBD'}
-            </p>
+            <h4>Where:</h4>
+            <div>
+              <p>
+                {selectedEvent.venue ? selectedEvent.venue.name : 'TBD'}
+              </p>
+            </div>
           </div>
-        </div>
-        <div>
-          <h4>When:</h4>
           <div>
-            <p>
-              {moment.tz(selectedEvent.time, 'America/Chicago').format('MMMM Do, YYYY, h:mm a')}
-            </p>
+            <h4>When:</h4>
+            <div>
+              <p>
+                {moment.tz(selectedEvent.time, 'America/Chicago').format('MMMM Do, YYYY, h:mm a')}
+              </p>
+            </div>
           </div>
+          <div>
+            <h4>Details:</h4>
+            <div dangerouslySetInnerHTML={{ __html: selectedEvent.description }} />
+          </div>
+          <SliderCarousel title="RSVP">
+            {this.state.rsvps.map(member => (
+              <Card key={member.id}>
+                <div>
+                  <div className="item">
+                    <div
+                      className="avatar"
+                      style={{ backgroundImage: `url(${member.photo.thumb_link})` }}
+                    />
+                  </div>
+                  <h6>{member.name}</h6>
+                </div>
+              </Card>
+            ))}
+          </SliderCarousel>
         </div>
-        <div>
-          <h4>Details:</h4>
-          <div dangerouslySetInnerHTML={{ __html: selectedEvent.description }} />
-        </div>
-        <MemberCarousel
-          members={this.state.rsvps}
-        />
       </div>
     );
   }

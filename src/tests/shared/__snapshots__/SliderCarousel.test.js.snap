@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The MemberCarousel Component should render correctly 1`] = `
+exports[`The SliderCarousel Component should render correctly 1`] = `
 <div
-  className="MemberCarousel"
+  className="SliderCarousel"
 >
   <h4>
-    RSVP:
+    :
   </h4>
   <div
     className="slider"

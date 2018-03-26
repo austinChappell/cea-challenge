@@ -80,6 +80,13 @@ h6, p {
   .Event button:hover {
     background-color: #FF7E81; }
 
+.EventDetails .details {
+  padding: 30px; }
+  .EventDetails .details > div {
+    margin: 10px 0; }
+    .EventDetails .details > div h4 {
+      margin-bottom: 5px; }
+
 .Group .events {
   display: flex;
   flex-wrap: wrap;
@@ -102,21 +109,36 @@ h6, p {
     background-color: rgba(10, 0, 10, 0.8); }
   .Home h1 {
     color: #83E0F4;
-    margin-top: 20vh; }
+    margin: 20vh 20px 20px; }
+  .Home .meetups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto; }
+  .Home .meetup {
+    background-color: #ff383f;
+    margin: 30px;
+    display: grid;
+    justify-content: center;
+    align-content: center; }
   .Home a {
-    color: #fafafa; }
+    color: #fafafa;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 10px 25px; }
 
-.MemberCarousel .slider {
+.SliderCarousel .slider {
   display: flex;
   overflow: auto;
   text-align: center;
   align-items: stretch; }
-  .MemberCarousel .slider .member {
+  .SliderCarousel .slider .item {
     min-width: 100px; }
-    .MemberCarousel .slider .member .avatar {
+    .SliderCarousel .slider .item .avatar {
       margin: 10px auto;
       border-radius: 50%;
       height: 80px;
       width: 80px; }
-    .MemberCarousel .slider .member img {
+    .SliderCarousel .slider .item img {
       border-radius: 50%; }

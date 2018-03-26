@@ -1,10 +1,10 @@
-.MemberCarousel {
+.SliderCarousel {
   .slider {
     display: flex;
     overflow: auto;
     text-align: center;
     align-items: stretch;
-    .member {
+    .item {
       min-width: 100px;
       .avatar {
         margin: 10px auto;

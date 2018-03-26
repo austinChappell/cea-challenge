@@ -6,12 +6,14 @@ import Api from '../../api/api';
 import mockData from '../../data/data';
 
 import Banner from '../shared/Banner';
+import Card from '../shared/Card';
 import Event from '../shared/Event';
 import RouteRestrictor from '../shared/RouteRestrictor';
+import SliderCarousel from '../shared/SliderCarousel';
 
 const api = new Api();
 
-const { getMeetupData, getSimilarEvents } = api;
+const { getMeetupData, getSimilarGroups } = api;
 
 const propTypes = {
   accessToken: PropTypes.string,
@@ -28,6 +30,7 @@ class Group extends Component {
   state = {
     events: [],
     group: '',
+    similarGroups: [],
   }
 
   componentWillMount() {
@@ -42,15 +45,16 @@ class Group extends Component {
     this.setState({ group });
   }
 
-  setSimilarEvents = (events) => {
-    console.log('SIMILAR EVENTS', events);
+  setSimilarGroups = (similarGroups) => {
+    console.log('SIMILAR GROUPS', similarGroups);
+    this.setState({ similarGroups });
   }
 
   loadData = (events) => {
     const { group } = events[0];
     const { urlname } = group;
     this.setGroupInfo(group);
-    getSimilarEvents(urlname, this.props.accessToken, this.setSimilarEvents);
+    getSimilarGroups(urlname, this.props.accessToken, this.setSimilarGroups);
     this.setState({ events });
   }
 
@@ -102,6 +106,15 @@ class Group extends Component {
             />
             ))}
         </div>
+        <SliderCarousel>
+          {this.state.similarGroups.map(group => (
+            <Card key={group.id}>
+              <div>
+                <h6>{group.name}</h6>
+              </div>
+            </Card>
+          ))}
+        </SliderCarousel>
       </div>
     );
   }

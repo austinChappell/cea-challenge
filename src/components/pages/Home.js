@@ -58,27 +58,29 @@ class Home extends Component {
       <div className="Home page">
         <div className="overlay">
           <h1>Austin's Favorite Meetups</h1>
-          {myMeetups.map((meetup, index) => {
-            // if there is no token, clicking a link will prompt
-            // user to sign in to meetup.com
-            const redirectLink = accessToken ?
-              <Link to={`/group/${meetup.url}`}>{meetup.title}</Link>
-              :
-              <a href={meetupAuthUrl} onClick={() => this.storeGroupUrl(meetup.url)}>{meetup.title}</a>;
+          <div className="meetups">
+            {myMeetups.map((meetup, index) => {
+              // if there is no token, clicking a link will prompt
+              // user to sign in to meetup.com
+              const redirectLink = accessToken ?
+                <Link to={`/group/${meetup.url}`}>{meetup.title}</Link>
+                :
+                <a href={meetupAuthUrl} onClick={() => this.storeGroupUrl(meetup.url)}>{meetup.title}</a>;
 
-            // if redirect is true, then redirecto the the group
-            // found in session storage
-            // redirect is true if access token is in url
-            const meetupLink = this.state.redirect ?
-              <Redirect to={`/group/${sessionStorage.groupUrl}`} />
-              : redirectLink;
+              // if redirect is true, then redirecto the the group
+              // found in session storage
+              // redirect is true if access token is in url
+              const meetupLink = this.state.redirect ?
+                <Redirect to={`/group/${sessionStorage.groupUrl}`} />
+                : redirectLink;
 
-            return (
-              <div key={index}>
-                {meetupLink}
-              </div>
-            );
-          })}
+              return (
+                <div className="meetup" key={index}>
+                  {meetupLink}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     );

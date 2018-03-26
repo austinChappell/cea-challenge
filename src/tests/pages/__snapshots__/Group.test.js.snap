@@ -40,6 +40,7 @@ ShallowWrapper {
         <div
           className="events"
         />,
+        <SliderCarousel />,
       ],
       "className": "Group page",
     },
@@ -83,6 +84,17 @@ ShallowWrapper {
         "rendered": Array [],
         "type": "div",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [],
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -106,6 +118,7 @@ ShallowWrapper {
           <div
             className="events"
           />,
+          <SliderCarousel />,
         ],
         "className": "Group page",
       },
@@ -148,6 +161,17 @@ ShallowWrapper {
           "ref": null,
           "rendered": Array [],
           "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [],
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": [Function],
         },
       ],
       "type": "div",

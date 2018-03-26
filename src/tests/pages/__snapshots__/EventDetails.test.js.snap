@@ -41,41 +41,45 @@ ShallowWrapper {
           subTitle={null}
           title={null}
         />,
-        <div>
-          <h4>
-            Where:
-          </h4>
+        <div
+          className="details"
+        >
           <div>
-            <p>
-              TBD
-            </p>
+            <h4>
+              Where:
+            </h4>
+            <div>
+              <p>
+                TBD
+              </p>
+            </div>
           </div>
-        </div>,
-        <div>
-          <h4>
-            When:
-          </h4>
           <div>
-            <p>
-              March 25th, 2018, 9:20 pm
-            </p>
+            <h4>
+              When:
+            </h4>
+            <div>
+              <p>
+                March 25th, 2018, 9:20 pm
+              </p>
+            </div>
           </div>
-        </div>,
-        <div>
-          <h4>
-            Details:
-          </h4>
-          <div
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": undefined,
+          <div>
+            <h4>
+              Details:
+            </h4>
+            <div
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": undefined,
+                }
               }
-            }
+            />
+          </div>
+          <SliderCarousel
+            title="RSVP"
           />
         </div>,
-        <MemberCarousel
-          members={Array []}
-        />,
       ],
       "className": "EventDetails",
     },
@@ -113,127 +117,43 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h4>
-              Where:
-            </h4>,
             <div>
-              <p>
-                TBD
-              </p>
+              <h4>
+                Where:
+              </h4>
+              <div>
+                <p>
+                  TBD
+                </p>
+              </div>
             </div>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Where:",
-            },
-            "ref": null,
-            "rendered": "Where:",
-            "type": "h4",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <p>
-                TBD
-              </p>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "TBD",
-              },
-              "ref": null,
-              "rendered": "TBD",
-              "type": "p",
-            },
-            "type": "div",
-          },
-        ],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <h4>
-              When:
-            </h4>,
             <div>
-              <p>
-                March 25th, 2018, 9:20 pm
-              </p>
+              <h4>
+                When:
+              </h4>
+              <div>
+                <p>
+                  March 25th, 2018, 9:20 pm
+                </p>
+              </div>
             </div>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "When:",
-            },
-            "ref": null,
-            "rendered": "When:",
-            "type": "h4",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <p>
-                March 25th, 2018, 9:20 pm
-              </p>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "March 25th, 2018, 9:20 pm",
-              },
-              "ref": null,
-              "rendered": "March 25th, 2018, 9:20 pm",
-              "type": "p",
-            },
-            "type": "div",
-          },
-        ],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <h4>
-              Details:
-            </h4>,
-            <div
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": undefined,
+            <div>
+              <h4>
+                Details:
+              </h4>
+              <div
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": undefined,
+                  }
                 }
-              }
+              />
+            </div>,
+            <SliderCarousel
+              title="RSVP"
             />,
           ],
+          "className": "details",
         },
         "ref": null,
         "rendered": Array [
@@ -242,38 +162,172 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Details:",
+              "children": Array [
+                <h4>
+                  Where:
+                </h4>,
+                <div>
+                  <p>
+                    TBD
+                  </p>
+                </div>,
+              ],
             },
             "ref": null,
-            "rendered": "Details:",
-            "type": "h4",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Where:",
+                },
+                "ref": null,
+                "rendered": "Where:",
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    TBD
+                  </p>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "TBD",
+                  },
+                  "ref": null,
+                  "rendered": "TBD",
+                  "type": "p",
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
           },
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "dangerouslySetInnerHTML": Object {
-                "__html": undefined,
-              },
+              "children": Array [
+                <h4>
+                  When:
+                </h4>,
+                <div>
+                  <p>
+                    March 25th, 2018, 9:20 pm
+                  </p>
+                </div>,
+              ],
             },
             "ref": null,
-            "rendered": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "When:",
+                },
+                "ref": null,
+                "rendered": "When:",
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    March 25th, 2018, 9:20 pm
+                  </p>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "March 25th, 2018, 9:20 pm",
+                  },
+                  "ref": null,
+                  "rendered": "March 25th, 2018, 9:20 pm",
+                  "type": "p",
+                },
+                "type": "div",
+              },
+            ],
             "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h4>
+                  Details:
+                </h4>,
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                />,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Details:",
+                },
+                "ref": null,
+                "rendered": "Details:",
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "dangerouslySetInnerHTML": Object {
+                    "__html": undefined,
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [],
+              "title": "RSVP",
+            },
+            "ref": null,
+            "rendered": Array [],
+            "type": [Function],
           },
         ],
         "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "members": Array [],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
       },
     ],
     "type": "div",
@@ -295,41 +349,45 @@ ShallowWrapper {
             subTitle={null}
             title={null}
           />,
-          <div>
-            <h4>
-              Where:
-            </h4>
+          <div
+            className="details"
+          >
             <div>
-              <p>
-                TBD
-              </p>
+              <h4>
+                Where:
+              </h4>
+              <div>
+                <p>
+                  TBD
+                </p>
+              </div>
             </div>
-          </div>,
-          <div>
-            <h4>
-              When:
-            </h4>
             <div>
-              <p>
-                March 25th, 2018, 9:20 pm
-              </p>
+              <h4>
+                When:
+              </h4>
+              <div>
+                <p>
+                  March 25th, 2018, 9:20 pm
+                </p>
+              </div>
             </div>
-          </div>,
-          <div>
-            <h4>
-              Details:
-            </h4>
-            <div
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": undefined,
+            <div>
+              <h4>
+                Details:
+              </h4>
+              <div
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": undefined,
+                  }
                 }
-              }
+              />
+            </div>
+            <SliderCarousel
+              title="RSVP"
             />
           </div>,
-          <MemberCarousel
-            members={Array []}
-          />,
         ],
         "className": "EventDetails",
       },
@@ -367,127 +425,43 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h4>
-                Where:
-              </h4>,
               <div>
-                <p>
-                  TBD
-                </p>
+                <h4>
+                  Where:
+                </h4>
+                <div>
+                  <p>
+                    TBD
+                  </p>
+                </div>
               </div>,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Where:",
-              },
-              "ref": null,
-              "rendered": "Where:",
-              "type": "h4",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <p>
-                  TBD
-                </p>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "TBD",
-                },
-                "ref": null,
-                "rendered": "TBD",
-                "type": "p",
-              },
-              "type": "div",
-            },
-          ],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <h4>
-                When:
-              </h4>,
               <div>
-                <p>
-                  March 25th, 2018, 9:20 pm
-                </p>
+                <h4>
+                  When:
+                </h4>
+                <div>
+                  <p>
+                    March 25th, 2018, 9:20 pm
+                  </p>
+                </div>
               </div>,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "When:",
-              },
-              "ref": null,
-              "rendered": "When:",
-              "type": "h4",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <p>
-                  March 25th, 2018, 9:20 pm
-                </p>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "March 25th, 2018, 9:20 pm",
-                },
-                "ref": null,
-                "rendered": "March 25th, 2018, 9:20 pm",
-                "type": "p",
-              },
-              "type": "div",
-            },
-          ],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <h4>
-                Details:
-              </h4>,
-              <div
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": undefined,
+              <div>
+                <h4>
+                  Details:
+                </h4>
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
                   }
-                }
+                />
+              </div>,
+              <SliderCarousel
+                title="RSVP"
               />,
             ],
+            "className": "details",
           },
           "ref": null,
           "rendered": Array [
@@ -496,38 +470,172 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Details:",
+                "children": Array [
+                  <h4>
+                    Where:
+                  </h4>,
+                  <div>
+                    <p>
+                      TBD
+                    </p>
+                  </div>,
+                ],
               },
               "ref": null,
-              "rendered": "Details:",
-              "type": "h4",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Where:",
+                  },
+                  "ref": null,
+                  "rendered": "Where:",
+                  "type": "h4",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p>
+                      TBD
+                    </p>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "TBD",
+                    },
+                    "ref": null,
+                    "rendered": "TBD",
+                    "type": "p",
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "dangerouslySetInnerHTML": Object {
-                  "__html": undefined,
-                },
+                "children": Array [
+                  <h4>
+                    When:
+                  </h4>,
+                  <div>
+                    <p>
+                      March 25th, 2018, 9:20 pm
+                    </p>
+                  </div>,
+                ],
               },
               "ref": null,
-              "rendered": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "When:",
+                  },
+                  "ref": null,
+                  "rendered": "When:",
+                  "type": "h4",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p>
+                      March 25th, 2018, 9:20 pm
+                    </p>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "March 25th, 2018, 9:20 pm",
+                    },
+                    "ref": null,
+                    "rendered": "March 25th, 2018, 9:20 pm",
+                    "type": "p",
+                  },
+                  "type": "div",
+                },
+              ],
               "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h4>
+                    Details:
+                  </h4>,
+                  <div
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": undefined,
+                      }
+                    }
+                  />,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Details:",
+                  },
+                  "ref": null,
+                  "rendered": "Details:",
+                  "type": "h4",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "dangerouslySetInnerHTML": Object {
+                      "__html": undefined,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [],
+                "title": "RSVP",
+              },
+              "ref": null,
+              "rendered": Array [],
+              "type": [Function],
             },
           ],
           "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "members": Array [],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
         },
       ],
       "type": "div",

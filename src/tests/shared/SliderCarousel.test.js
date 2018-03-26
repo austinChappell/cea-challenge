@@ -2,15 +2,15 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 
-import MemberCarousel from '../../components/shared/MemberCarousel';
+import SliderCarousel from '../../components/shared/SliderCarousel';
 
 const props = {
   members: [],
 };
 
-describe('The MemberCarousel Component', () => {
+describe('The SliderCarousel Component', () => {
   it('should render correctly', () => {
-    const wrapper = shallow(<MemberCarousel {...props} />);
+    const wrapper = shallow(<SliderCarousel {...props} />);
     expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
 });

@@ -102,11 +102,9 @@ h6, p {
   text-align: center;
   position: relative; }
   .Home .overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: absolute;
+    overflow: auto;
+    height: 100%;
     background-color: rgba(10, 0, 10, 0.8); }
   .Home h1 {
     color: #83E0F4;

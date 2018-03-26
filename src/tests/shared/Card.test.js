@@ -6,7 +6,7 @@ import Card from '../../components/shared/Card';
 
 describe('The Card Component', () => {
   it('should render correctly', () => {
-    const wrapper = shallow(<Card />);
+    const wrapper = shallow(<Card><div /></Card>);
     expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
 });

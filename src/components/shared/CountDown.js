@@ -1,11 +1,21 @@
 import React, { Component, Fragment } from 'react';
-import moment from 'moment';
+import PropTypes from 'prop-types';
 
 import HelperMethods from '../../helpers/';
 
 const helperMethods = new HelperMethods();
 
 const { getTimerDisplay } = helperMethods;
+
+const propTypes = {
+  eventTime: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+  message: PropTypes.string,
+};
+
+const defaultProps = {
+  eventTime: null,
+  message: null,
+};
 
 class CountDown extends Component {
   state = {
@@ -14,7 +24,7 @@ class CountDown extends Component {
       hours: 0,
       minutes: 0,
       seconds: 0,
-    }
+    },
   }
 
   componentDidMount() {
@@ -28,7 +38,7 @@ class CountDown extends Component {
   getTime = () => {
     const { eventTime } = this.props;
     const time = getTimerDisplay(eventTime);
-    this.setState({ time })
+    this.setState({ time });
   }
 
   startTimer = () => {
@@ -51,26 +61,29 @@ class CountDown extends Component {
       <Fragment>
         <div className="CountDown">
           <div className="time-block">
-            <h4>{isNaN(days) ? '--' : days}</h4>
+            <h4>{Number.isNaN(days) ? '--' : days}</h4>
             <span>Days</span>
           </div>
           <div className="time-block">
-            <h4>{isNaN(hours) ? '--' : hours}</h4>
+            <h4>{Number.isNaN(hours) ? '--' : hours}</h4>
             <span>Hours</span>
           </div>
           <div className="time-block">
-            <h4>{isNaN(minutes) ? '--' : minutes}</h4>
+            <h4>{Number.isNaN(minutes) ? '--' : minutes}</h4>
             <span>Minutes</span>
           </div>
           <div className="time-block">
-            <h4>{isNaN(seconds) ? '--' : seconds}</h4>
+            <h4>{Number.isNaN(seconds) ? '--' : seconds}</h4>
             <span>Seconds</span>
           </div>
         </div>
         <h6>{message}</h6>
       </Fragment>
-    )
+    );
   }
 }
+
+CountDown.propTypes = propTypes;
+CountDown.defaultProps = defaultProps;
 
 export default CountDown;

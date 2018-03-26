@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Panel Component should render correctly 1`] = `
+exports[`The EventDetails Component should render correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -12,7 +12,11 @@ ShallowWrapper {
         "params": Object {},
       }
     }
-    selectedEvent={Object {}}
+    selectedEvent={
+      Object {
+        "time": 1522030848733,
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -30,7 +34,7 @@ ShallowWrapper {
         <Connect(RouteRestrictor) />,
         <Banner
           countDownMessage="Until the undefined Meetup"
-          nextEventTime={undefined}
+          nextEventTime={1522030848733}
           subTitle={undefined}
         />,
         <div>
@@ -49,7 +53,7 @@ ShallowWrapper {
           </h4>
           <div>
             <p>
-              March 25th, 2018, 9:15 pm
+              March 25th, 2018, 9:20 pm
             </p>
           </div>
         </div>,
@@ -88,7 +92,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "countDownMessage": "Until the undefined Meetup",
-          "nextEventTime": undefined,
+          "nextEventTime": 1522030848733,
           "subTitle": undefined,
         },
         "ref": null,
@@ -161,7 +165,7 @@ ShallowWrapper {
             </h4>,
             <div>
               <p>
-                March 25th, 2018, 9:15 pm
+                March 25th, 2018, 9:20 pm
               </p>
             </div>,
           ],
@@ -185,7 +189,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <p>
-                March 25th, 2018, 9:15 pm
+                March 25th, 2018, 9:20 pm
               </p>,
             },
             "ref": null,
@@ -194,10 +198,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "March 25th, 2018, 9:15 pm",
+                "children": "March 25th, 2018, 9:20 pm",
               },
               "ref": null,
-              "rendered": "March 25th, 2018, 9:15 pm",
+              "rendered": "March 25th, 2018, 9:20 pm",
               "type": "p",
             },
             "type": "div",
@@ -276,7 +280,7 @@ ShallowWrapper {
           <Connect(RouteRestrictor) />,
           <Banner
             countDownMessage="Until the undefined Meetup"
-            nextEventTime={undefined}
+            nextEventTime={1522030848733}
             subTitle={undefined}
           />,
           <div>
@@ -295,7 +299,7 @@ ShallowWrapper {
             </h4>
             <div>
               <p>
-                March 25th, 2018, 9:15 pm
+                March 25th, 2018, 9:20 pm
               </p>
             </div>
           </div>,
@@ -334,7 +338,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "countDownMessage": "Until the undefined Meetup",
-            "nextEventTime": undefined,
+            "nextEventTime": 1522030848733,
             "subTitle": undefined,
           },
           "ref": null,
@@ -407,7 +411,7 @@ ShallowWrapper {
               </h4>,
               <div>
                 <p>
-                  March 25th, 2018, 9:15 pm
+                  March 25th, 2018, 9:20 pm
                 </p>
               </div>,
             ],
@@ -431,7 +435,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <p>
-                  March 25th, 2018, 9:15 pm
+                  March 25th, 2018, 9:20 pm
                 </p>,
               },
               "ref": null,
@@ -440,10 +444,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "March 25th, 2018, 9:15 pm",
+                  "children": "March 25th, 2018, 9:20 pm",
                 },
                 "ref": null,
-                "rendered": "March 25th, 2018, 9:15 pm",
+                "rendered": "March 25th, 2018, 9:20 pm",
                 "type": "p",
               },
               "type": "div",

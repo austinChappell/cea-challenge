@@ -12,7 +12,9 @@ const initialState = {
     accessToken: 'fakeToken',
   },
   eventReducer: {
-    selectedEvent: {},
+    selectedEvent: {
+      time: 1522030848733,
+    },
   },
 };
 
@@ -22,7 +24,7 @@ const props = {
   },
 };
 
-describe('The Panel Component', () => {
+describe('The EventDetails Component', () => {
   it('should render correctly', () => {
     const options = {
       context: {

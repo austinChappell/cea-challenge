@@ -34,10 +34,14 @@ class Group extends Component {
   }
 
   componentWillMount() {
-    if (process.env.REACT_APP_ENV === 'development') {
-      this.loadMockData();
-    } else {
-      this.loadPage();
+    this.initialize();
+  }
+
+  componentDidUpdate(prevProps) {
+    const prevGroupName = prevProps.match.params.groupName;
+    const thisGroupName = this.props.match.params.groupName;
+    if (prevGroupName !== thisGroupName) {
+      this.initialize();
     }
   }
 
@@ -46,8 +50,15 @@ class Group extends Component {
   }
 
   setSimilarGroups = (similarGroups) => {
-    console.log('SIMILAR GROUPS', similarGroups);
     this.setState({ similarGroups });
+  }
+
+  initialize = () => {
+    if (process.env.REACT_APP_ENV === 'development') {
+      this.loadMockData();
+    } else {
+      this.loadPage();
+    }
   }
 
   loadData = (events) => {

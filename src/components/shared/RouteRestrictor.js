@@ -1,6 +1,15 @@
-import React, { Component } from 'react';
-import { Redirect } from 'react-router';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+
+const propTypes = {
+  accessToken: PropTypes.string,
+};
+
+const defaultProps = {
+  accessToken: null,
+};
 
 const RouteRestrictor = (props) => {
   const { accessToken } = props;
@@ -13,5 +22,8 @@ const RouteRestrictor = (props) => {
 const mapStateToProps = state => ({
   accessToken: state.generalReducer.accessToken,
 });
+
+RouteRestrictor.propTypes = propTypes;
+RouteRestrictor.defaultProps = defaultProps;
 
 export default connect(mapStateToProps)(RouteRestrictor);

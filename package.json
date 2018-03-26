@@ -23,6 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
+    "test-dev": "jest --watch",
     "eject": "react-scripts eject",
     "sass": "node-sass src/scss/index.scss src/index.css -r -w"
   },

@@ -1,11 +1,11 @@
 import moment from 'moment';
 
 class HelperMethods {
-  getTimerDisplay = (time) => {
-    const days = moment(time).diff(Date.now(), 'days');
-    const actualHours = moment(time).diff(Date.now(), 'hours');
-    const actualMinutes = moment(time).diff(Date.now(), 'minutes');
-    const actualSeconds = moment(time).diff(Date.now(), 'seconds');
+  getTimerDisplay = (startTime, endTime) => {
+    const days = moment(endTime).diff(startTime, 'days');
+    const actualHours = moment(endTime).diff(startTime, 'hours');
+    const actualMinutes = moment(endTime).diff(startTime, 'minutes');
+    const actualSeconds = moment(endTime).diff(startTime, 'seconds');
 
     const hours = actualHours > 23 ? actualHours % 24 : actualHours;
     const minutes = actualMinutes > 59 ? actualMinutes % 60 : actualMinutes;
@@ -16,7 +16,7 @@ class HelperMethods {
       hours,
       minutes,
       seconds,
-    }
+    };
   }
 }
 

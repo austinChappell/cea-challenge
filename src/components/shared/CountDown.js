@@ -10,11 +10,13 @@ const { getTimerDisplay } = helperMethods;
 const propTypes = {
   eventTime: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
   message: PropTypes.string,
+  startTime: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
 };
 
 const defaultProps = {
   eventTime: null,
   message: null,
+  startTime: null,
 };
 
 class CountDown extends Component {
@@ -36,8 +38,9 @@ class CountDown extends Component {
   }
 
   getTime = () => {
-    const { eventTime } = this.props;
-    const time = getTimerDisplay(eventTime);
+    const { eventTime, startTime } = this.props;
+    const now = startTime || Date.now();
+    const time = getTimerDisplay(now, eventTime);
     this.setState({ time });
   }
 

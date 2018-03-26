@@ -9,7 +9,7 @@ exports[`The CountDown Component should render correctly 1`] = `
       className="time-block"
     >
       <h4>
-        0
+        3449
       </h4>
       <span>
         Days
@@ -29,7 +29,7 @@ exports[`The CountDown Component should render correctly 1`] = `
       className="time-block"
     >
       <h4>
-        -47
+        23
       </h4>
       <span>
         Minutes
@@ -39,7 +39,7 @@ exports[`The CountDown Component should render correctly 1`] = `
       className="time-block"
     >
       <h4>
-        -2849
+        20
       </h4>
       <span>
         Seconds

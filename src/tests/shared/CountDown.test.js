@@ -7,6 +7,7 @@ import CountDown from '../../components/shared/CountDown';
 const props = {
   eventTime: 1522030848733,
   message: '',
+  startTime: 1224035848733,
 };
 
 describe('The CountDown Component', () => {

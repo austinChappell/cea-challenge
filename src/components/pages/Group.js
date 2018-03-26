@@ -125,23 +125,31 @@ class Group extends Component {
             ))}
         </div>
         <SliderCarousel>
-          {this.state.similarGroups.map(g => (
-            <Card
-              key={g.id}
-              handleClick={this.visitGroup}
-              returnValue={g}
-            >
-              <div>
-                <div className="item">
-                  <div
-                    className="avatar"
-                    style={{ backgroundImage: `url(${g.key_photo.thumb_link})` }}
-                  />
+          {this.state.similarGroups.map((g) => {
+            const photo = g.key_photo ?
+            (
+              <div
+                className="avatar"
+                style={{ backgroundImage: `url(${g.key_photo.thumb_link})` }}
+              />
+            )
+            : null;
+
+            return (
+              <Card
+                key={g.id}
+                handleClick={this.visitGroup}
+                returnValue={g}
+              >
+                <div>
+                  <div className="item">
+                    {photo}
+                  </div>
+                  <h6>{g.name}</h6>
                 </div>
-                <h6>{g.name}</h6>
-              </div>
-            </Card>
-          ))}
+              </Card>
+            );
+          })};
         </SliderCarousel>
       </div>
     );

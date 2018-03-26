@@ -2,10 +2,11 @@
   // background: linear-gradient($color-black, $color-secondary-light);
   background: url('./assets/images/kari-shea-226153-unsplash.jpg');
   background-size: cover;
+  background-attachment: fixed;
   text-align: center;
   position: relative;
   .overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;

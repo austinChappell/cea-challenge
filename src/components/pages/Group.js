@@ -79,6 +79,10 @@ class Group extends Component {
     this.props.history.push(selectedEventURL);
   }
 
+  visitGroup = (groupName) => {
+    this.props.history.push(`/group/${groupName}`);
+  }
+
   render() {
     const { group } = this.state;
     const countDownMessage = `Until the next ${group.name} Meetup`;
@@ -108,7 +112,11 @@ class Group extends Component {
         </div>
         <SliderCarousel>
           {this.state.similarGroups.map(group => (
-            <Card key={group.id}>
+            <Card
+              key={group.id}
+              handleClick={this.visitGroup}
+              returnValue={group.urlname}
+            >
               <div>
                 <div className="item">
                   <div

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import moment from 'moment';
+import moment from 'moment-timezone';
 
 import Banner from '../shared/Banner';
 import MemberCarousel from '../shared/MemberCarousel';
@@ -70,7 +70,7 @@ class EventDetails extends Component {
           <h4>When:</h4>
           <div>
             <p>
-              {moment(selectedEvent.time).format('MMMM Do, YYYY, h:mm a')}
+              {moment.tz(selectedEvent.time, 'America/Chicago').format('MMMM Do, YYYY, h:mm a')}
             </p>
           </div>
         </div>

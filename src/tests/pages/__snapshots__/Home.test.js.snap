@@ -52,6 +52,17 @@ ShallowWrapper {
               NodeSchool
             </Link>
           </div>
+          <div
+            className="meetup"
+          >
+            <Link
+              href="/group/Match-technology-presents"
+              replace={false}
+              to="/group/Match-technology-presents"
+            >
+              Match
+            </Link>
+          </div>
         </div>
       </div>,
       "className": "Home page",
@@ -89,6 +100,17 @@ ShallowWrapper {
                 to="/group/Nodeschool-Dallas"
               >
                 NodeSchool
+              </Link>
+            </div>
+            <div
+              className="meetup"
+            >
+              <Link
+                href="/group/Match-technology-presents"
+                replace={false}
+                to="/group/Match-technology-presents"
+              >
+                Match
               </Link>
             </div>
           </div>,
@@ -134,6 +156,17 @@ ShallowWrapper {
                   to="/group/Nodeschool-Dallas"
                 >
                   NodeSchool
+                </Link>
+              </div>,
+              <div
+                className="meetup"
+              >
+                <Link
+                  href="/group/Match-technology-presents"
+                  replace={false}
+                  to="/group/Match-technology-presents"
+                >
+                  Match
                 </Link>
               </div>,
             ],
@@ -203,6 +236,37 @@ ShallowWrapper {
               },
               "type": "div",
             },
+            Object {
+              "instance": null,
+              "key": "Match-technology-presents",
+              "nodeType": "host",
+              "props": Object {
+                "children": <Link
+                  href="/group/Match-technology-presents"
+                  replace={false}
+                  to="/group/Match-technology-presents"
+                >
+                  Match
+                </Link>,
+                "className": "meetup",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Match",
+                  "href": "/group/Match-technology-presents",
+                  "replace": false,
+                  "to": "/group/Match-technology-presents",
+                },
+                "ref": null,
+                "rendered": "Match",
+                "type": [Function],
+              },
+              "type": "div",
+            },
           ],
           "type": "div",
         },
@@ -248,6 +312,17 @@ ShallowWrapper {
                 NodeSchool
               </Link>
             </div>
+            <div
+              className="meetup"
+            >
+              <Link
+                href="/group/Match-technology-presents"
+                replace={false}
+                to="/group/Match-technology-presents"
+              >
+                Match
+              </Link>
+            </div>
           </div>
         </div>,
         "className": "Home page",
@@ -285,6 +360,17 @@ ShallowWrapper {
                   to="/group/Nodeschool-Dallas"
                 >
                   NodeSchool
+                </Link>
+              </div>
+              <div
+                className="meetup"
+              >
+                <Link
+                  href="/group/Match-technology-presents"
+                  replace={false}
+                  to="/group/Match-technology-presents"
+                >
+                  Match
                 </Link>
               </div>
             </div>,
@@ -330,6 +416,17 @@ ShallowWrapper {
                     to="/group/Nodeschool-Dallas"
                   >
                     NodeSchool
+                  </Link>
+                </div>,
+                <div
+                  className="meetup"
+                >
+                  <Link
+                    href="/group/Match-technology-presents"
+                    replace={false}
+                    to="/group/Match-technology-presents"
+                  >
+                    Match
                   </Link>
                 </div>,
               ],
@@ -395,6 +492,37 @@ ShallowWrapper {
                   },
                   "ref": null,
                   "rendered": "NodeSchool",
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": "Match-technology-presents",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Link
+                    href="/group/Match-technology-presents"
+                    replace={false}
+                    to="/group/Match-technology-presents"
+                  >
+                    Match
+                  </Link>,
+                  "className": "meetup",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Match",
+                    "href": "/group/Match-technology-presents",
+                    "replace": false,
+                    "to": "/group/Match-technology-presents",
+                  },
+                  "ref": null,
+                  "rendered": "Match",
                   "type": [Function],
                 },
                 "type": "div",

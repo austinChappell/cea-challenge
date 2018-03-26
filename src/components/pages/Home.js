@@ -12,6 +12,10 @@ const myMeetups = [
     title: 'NodeSchool',
     url: 'Nodeschool-Dallas',
   },
+  {
+    title: 'Match',
+    url: 'Match-technology-presents',
+  },
 ];
 
 const propTypes = {

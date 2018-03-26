@@ -110,6 +110,12 @@ class Group extends Component {
           {this.state.similarGroups.map(group => (
             <Card key={group.id}>
               <div>
+                <div className="item">
+                  <div
+                    className="avatar"
+                    style={{ backgroundImage: `url(${group.key_photo.thumb_link})` }}
+                  />
+                </div>
                 <h6>{group.name}</h6>
               </div>
             </Card>

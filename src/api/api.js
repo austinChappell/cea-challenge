@@ -18,6 +18,11 @@ class Api {
     const url = `https://api.meetup.com/${groupName}/events/${eventId}/rsvps?&sign=true&photo-host=public&access_token=${accessToken}`;
     this.get(url, cb);
   }
+
+  getMemberData = (memberId, accessToken, cb) => {
+    const url = `https://api.meetup.com/member/${memberId}?&sign=true&photo-host=public&access_token=${accessToken}`;
+    this.get(url, cb);
+  }
 }
 
 export default Api;

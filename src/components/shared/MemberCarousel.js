@@ -5,19 +5,24 @@ import Card from './Card';
 
 const propTypes = {
   members: PropTypes.arrayOf(PropTypes.object).isRequired,
+  selectMember: PropTypes.func.isRequired,
 };
 
 class MemberCarousel extends Component {
   state = {}
   render() {
-    const { members } = this.props;
+    const { members, selectMember } = this.props;
     console.log('members', members);
     return (
       <div className="MemberCarousel">
         <h4>RSVP:</h4>
         <div className="slider">
           {members.map(member => (
-            <Card key={member.id}>
+            <Card
+              key={member.id}
+              handleClick={selectMember}
+              returnValue={member.id}
+            >
               <div>
                 <div className="member">
                   <div

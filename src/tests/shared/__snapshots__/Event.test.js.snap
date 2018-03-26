@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Event Component should render correctly 1`] = `
-<Card>
+<Card
+  handleClick={null}
+  returnValue={null}
+>
   <div
     className="Event"
   >

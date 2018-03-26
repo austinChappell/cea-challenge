@@ -62,7 +62,9 @@ class Home extends Component {
 
   componentWillUpdate(nextProps) {
     if (this.props.accessToken !== nextProps.accessToken) {
-      this.setRedirect();
+      if (sessionStorage.getItem('groupUrl')) {
+        this.setRedirect();
+      }
     }
   }
 

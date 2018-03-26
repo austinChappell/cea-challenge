@@ -87,6 +87,9 @@ h6, p {
     .EventDetails .details > div h4 {
       margin-bottom: 5px; }
 
+.Group .details {
+  padding: 30px; }
+
 .Group .events {
   display: flex;
   flex-wrap: wrap;

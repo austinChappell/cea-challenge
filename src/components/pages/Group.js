@@ -133,42 +133,44 @@ class Group extends Component {
           subTitle={`Devvin' it up since ${startYear}`}
           title={this.state.group.name}
         />
-        <div className="events">
-          {this.state.events.map(event => (
-            <Event
-              key={event.id}
-              event={event}
-              selectEvent={this.selectEvent}
-            />
-            ))}
-        </div>
-        <SliderCarousel title="Similar Groups">
-          {this.state.similarGroups.map((g) => {
-            const photo = g.key_photo ?
-            (
-              <div
-                className="avatar"
-                style={{ backgroundImage: `url(${g.key_photo.thumb_link})` }}
+        <div className="details">
+          <div className="events">
+            {this.state.events.map(event => (
+              <Event
+                key={event.id}
+                event={event}
+                selectEvent={this.selectEvent}
               />
-            )
-            : null;
+              ))}
+          </div>
+          <SliderCarousel title="Similar Groups">
+            {this.state.similarGroups.map((g) => {
+              const photo = g.key_photo ?
+              (
+                <div
+                  className="avatar"
+                  style={{ backgroundImage: `url(${g.key_photo.thumb_link})` }}
+                />
+              )
+              : null;
 
-            return (
-              <Card
-                key={g.id}
-                handleClick={this.visitGroup}
-                returnValue={g}
-              >
-                <div>
-                  <div className="item">
-                    {photo}
+              return (
+                <Card
+                  key={g.id}
+                  handleClick={this.visitGroup}
+                  returnValue={g}
+                >
+                  <div>
+                    <div className="item">
+                      {photo}
+                    </div>
+                    <h6>{g.name}</h6>
                   </div>
-                  <h6>{g.name}</h6>
-                </div>
-              </Card>
-            );
-          })};
-        </SliderCarousel>
+                </Card>
+              );
+            })}
+          </SliderCarousel>
+        </div>
       </div>
     );
   }

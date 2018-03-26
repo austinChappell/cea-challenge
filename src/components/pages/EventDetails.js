@@ -91,19 +91,25 @@ class EventDetails extends Component {
             <div dangerouslySetInnerHTML={{ __html: selectedEvent.description }} />
           </div>
           <SliderCarousel title="RSVP">
-            {this.state.rsvps.map(member => (
-              <Card key={member.id}>
-                <div>
-                  <div className="item">
-                    <div
-                      className="avatar"
-                      style={{ backgroundImage: `url(${member.photo.thumb_link})` }}
-                    />
-                  </div>
-                  <h6>{member.name}</h6>
+            {this.state.rsvps.map((member) => {
+              const photo = member.photo ?
+              (
+                <div className="item">
+                  <div
+                    className="avatar"
+                    style={{ backgroundImage: `url(${member.photo.thumb_link})` }}
+                  />
                 </div>
-              </Card>
-            ))}
+              ) : null;
+              return (
+                <Card key={member.id}>
+                  <div>
+                    {photo}
+                    <h6>{member.name}</h6>
+                  </div>
+                </Card>
+              );
+            })}
           </SliderCarousel>
         </div>
       </div>

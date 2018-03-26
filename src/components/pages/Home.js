@@ -67,9 +67,9 @@ class Home extends Component {
     return (
       <div className="Home page">
         <div className="overlay">
-          <h1>Austin's Favorite Meetups</h1>
+          <h1>Austin&apos;s Favorite Meetups</h1>
           <div className="meetups">
-            {myMeetups.map((meetup, index) => {
+            {myMeetups.map((meetup) => {
               // if there is no token, clicking a link will prompt
               // user to sign in to meetup.com
               const redirectLink = accessToken ?
@@ -82,7 +82,14 @@ class Home extends Component {
                   </Link>
                 )
                 :
-                  <a href={meetupAuthUrl} onClick={() => this.storeGroupUrl(meetup.url)}>{meetup.title}</a>;
+                (
+                  <a
+                    href={meetupAuthUrl}
+                    onClick={() => this.storeGroupUrl(meetup.url)}
+                  >
+                    {meetup.title}
+                  </a>
+                );
 
               // if redirect is true, then redirecto the the group
               // found in session storage
@@ -92,7 +99,7 @@ class Home extends Component {
                 : redirectLink;
 
               return (
-                <div className="meetup" key={index}>
+                <div className="meetup" key={meetup.url}>
                   {meetupLink}
                 </div>
               );

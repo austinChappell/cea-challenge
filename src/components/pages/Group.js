@@ -92,8 +92,9 @@ class Group extends Component {
     this.props.history.push(selectedEventURL);
   }
 
-  visitGroup = (groupName) => {
-    this.props.history.push(`/group/${groupName}`);
+  visitGroup = (group) => {
+    this.props.history.push(`/group/${group.urlname}`);
+    this.setState({ group });
   }
 
   render() {
@@ -124,20 +125,20 @@ class Group extends Component {
             ))}
         </div>
         <SliderCarousel>
-          {this.state.similarGroups.map(group => (
+          {this.state.similarGroups.map(g => (
             <Card
-              key={group.id}
+              key={g.id}
               handleClick={this.visitGroup}
-              returnValue={group.urlname}
+              returnValue={g}
             >
               <div>
                 <div className="item">
                   <div
                     className="avatar"
-                    style={{ backgroundImage: `url(${group.key_photo.thumb_link})` }}
+                    style={{ backgroundImage: `url(${g.key_photo.thumb_link})` }}
                   />
                 </div>
-                <h6>{group.name}</h6>
+                <h6>{g.name}</h6>
               </div>
             </Card>
           ))}

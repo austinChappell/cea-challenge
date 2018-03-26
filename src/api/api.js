@@ -20,7 +20,7 @@ class Api {
   }
 
   getMemberData = (memberId, accessToken, cb) => {
-    const url = `https://api.meetup.com/member/${memberId}?&sign=true&photo-host=public&access_token=${accessToken}`;
+    const url = `https://api.meetup.com/2/member/${memberId}?&sign=true&photo-host=public&access_token=${accessToken}`;
     this.get(url, cb);
   }
 }

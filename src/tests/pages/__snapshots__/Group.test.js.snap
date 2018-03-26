@@ -35,7 +35,7 @@ ShallowWrapper {
           goBackText="Back to Home Page"
           nextEventTime={null}
           subTitle="Devvin' it up since NaN"
-          title={undefined}
+          title={null}
         />,
         <div
           className="events"
@@ -65,7 +65,7 @@ ShallowWrapper {
           "goBackText": "Back to Home Page",
           "nextEventTime": null,
           "subTitle": "Devvin' it up since NaN",
-          "title": undefined,
+          "title": null,
         },
         "ref": null,
         "rendered": null,
@@ -101,7 +101,7 @@ ShallowWrapper {
             goBackText="Back to Home Page"
             nextEventTime={null}
             subTitle="Devvin' it up since NaN"
-            title={undefined}
+            title={null}
           />,
           <div
             className="events"
@@ -131,7 +131,7 @@ ShallowWrapper {
             "goBackText": "Back to Home Page",
             "nextEventTime": null,
             "subTitle": "Devvin' it up since NaN",
-            "title": undefined,
+            "title": null,
           },
           "ref": null,
           "rendered": null,

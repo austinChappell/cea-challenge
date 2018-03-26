@@ -34,8 +34,12 @@ ShallowWrapper {
         <Connect(RouteRestrictor) />,
         <Banner
           countDownMessage="Until the undefined Meetup"
+          goBackButton={false}
+          goBackRoute={null}
+          goBackText={null}
           nextEventTime={1522030848733}
-          subTitle={undefined}
+          subTitle={null}
+          title={null}
         />,
         <div>
           <h4>
@@ -92,8 +96,12 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "countDownMessage": "Until the undefined Meetup",
+          "goBackButton": false,
+          "goBackRoute": null,
+          "goBackText": null,
           "nextEventTime": 1522030848733,
-          "subTitle": undefined,
+          "subTitle": null,
+          "title": null,
         },
         "ref": null,
         "rendered": null,
@@ -280,8 +288,12 @@ ShallowWrapper {
           <Connect(RouteRestrictor) />,
           <Banner
             countDownMessage="Until the undefined Meetup"
+            goBackButton={false}
+            goBackRoute={null}
+            goBackText={null}
             nextEventTime={1522030848733}
-            subTitle={undefined}
+            subTitle={null}
+            title={null}
           />,
           <div>
             <h4>
@@ -338,8 +350,12 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "countDownMessage": "Until the undefined Meetup",
+            "goBackButton": false,
+            "goBackRoute": null,
+            "goBackText": null,
             "nextEventTime": 1522030848733,
-            "subTitle": undefined,
+            "subTitle": null,
+            "title": null,
           },
           "ref": null,
           "rendered": null,

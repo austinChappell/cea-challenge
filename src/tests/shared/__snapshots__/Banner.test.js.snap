@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Banner Component should render correctly 1`] = `
+<div
+  className="Banner"
+>
+  <span
+    className="go-back"
+  >
+    <Link
+      href=""
+      replace={false}
+      to=""
+    />
+  </span>
+  <h1 />
+  <h4 />
+  <CountDown
+    eventTime={2018-03-26T02:20:48.733Z}
+    message=""
+  />
+</div>
+`;

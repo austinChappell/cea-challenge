@@ -62,7 +62,7 @@ class Group extends Component {
   }
 
   loadData = (events) => {
-    const { group } = events[0];
+    const { group } = events.length > 0 ? events[0] : {};
     const { urlname } = group;
     this.setGroupInfo(group);
     getSimilarGroups(urlname, this.props.accessToken, this.setSimilarGroups);
@@ -77,7 +77,7 @@ class Group extends Component {
   loadPage = () => {
     const { accessToken, match } = this.props;
     const { groupName } = match.params;
-    const authorized = !!accessToken;
+    const authorized = accessToken !== null;
     if (authorized && process.env.REACT_APP_ENV !== 'development') {
       getMeetupData(groupName, accessToken, this.loadData);
     }

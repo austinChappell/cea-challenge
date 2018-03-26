@@ -85,6 +85,7 @@ class Group extends Component {
 
   loadPage = () => {
     const { accessToken, match } = this.props;
+    console.log('LOADING PAGE', accessToken);
     const { groupName } = match.params;
     const authorized = accessToken !== null;
     if (authorized && process.env.REACT_APP_ENV !== 'development') {

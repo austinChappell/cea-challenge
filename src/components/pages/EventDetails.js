@@ -31,6 +31,13 @@ class EventDetails extends Component {
     rsvps: [],
   }
 
+  componentWillMount() {
+    const storageToken = sessionStorage.getItem('accessToken');
+    if (!this.props.accessToken && storageToken) {
+      this.props.setAccessToken(storageToken);
+    }
+  }
+
   componentDidMount() {
     const { accessToken, match } = this.props;
     const { eventId, groupName } = match.params;
@@ -106,7 +113,14 @@ const mapStateToProps = state => ({
   selectedEvent: state.eventReducer.selectedEvent,
 });
 
+const mapDispatchToProps = dispatch => ({
+  setAccessToken: (accessToken) => {
+    const action = { type: 'SET_ACCESS_TOKEN', accessToken };
+    dispatch(action);
+  },
+});
+
 EventDetails.propTypes = propTypes;
 EventDetails.defaultProps = defaultProps;
 
-export default connect(mapStateToProps)(EventDetails);
+export default connect(mapStateToProps, mapDispatchToProps)(EventDetails);

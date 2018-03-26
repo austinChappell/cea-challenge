@@ -39,17 +39,23 @@ class Home extends Component {
 
   componentWillMount() {
     if (!this.props.accessToken) {
-      const { hash } = this.props.location;
-      if (hash.indexOf('access_token=') > -1) {
-        // split the url query string on "access_token="
-        const splitHash = hash.split('access_token=');
+      const storageToken = sessionStorage.getItem('accessToken');
+      if (storageToken) {
+        this.props.setAccessToken(storageToken);
+      } else {
+        const { hash } = this.props.location;
+        if (hash.indexOf('access_token=') > -1) {
+          // split the url query string on "access_token="
+          const splitHash = hash.split('access_token=');
 
-        // split the other query params off and return only the token
-        const accessToken = splitHash[1].split('&')[0];
+          // split the other query params off and return only the token
+          const accessToken = splitHash[1].split('&')[0];
 
-        // save accessToken to Redux
-        this.props.setAccessToken(accessToken);
-        this.setRedirect();
+          // save accessToken to Redux
+          this.props.setAccessToken(accessToken);
+          sessionStorage.setItem('accessToken', accessToken);
+          this.setRedirect();
+        }
       }
     }
   }

@@ -34,6 +34,13 @@ class Group extends Component {
   }
 
   componentWillMount() {
+    const storageToken = sessionStorage.getItem('accessToken');
+    if (!this.props.accessToken && storageToken) {
+      this.props.setAccessToken(storageToken);
+    }
+  }
+
+  componentDidMount() {
     this.initialize();
   }
 
@@ -161,6 +168,11 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+  setAccessToken: (accessToken) => {
+    const action = { type: 'SET_ACCESS_TOKEN', accessToken };
+    dispatch(action);
+  },
+
   selectEvent: (selectedEvent) => {
     const action = { type: 'SELECT_EVENT', selectedEvent };
     dispatch(action);

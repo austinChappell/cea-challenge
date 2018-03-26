@@ -6,7 +6,6 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <EventDetails
     accessToken="fakeToken"
-    dispatch={[Function]}
     match={
       Object {
         "params": Object {},
@@ -17,6 +16,7 @@ ShallowWrapper {
         "time": 1522030848733,
       }
     }
+    setAccessToken={[Function]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

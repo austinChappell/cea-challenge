@@ -3,25 +3,14 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   children: PropTypes.element.isRequired,
-  handleClick: PropTypes.func,
-  returnValue: PropTypes.number,
-};
-
-const defaultProps = {
-  handleClick: () => {},
-  returnValue: null,
 };
 
 const Card = props => (
-  <div
-    className="Card"
-    onClick={() => props.handleClick(props.returnValue)}
-  >
+  <div className="Card">
     {props.children}
   </div>
 );
 
 Card.propTypes = propTypes;
-Card.defaultProps = defaultProps;
 
 export default Card;

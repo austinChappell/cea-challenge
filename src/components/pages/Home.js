@@ -14,7 +14,6 @@ const myMeetups = [
 ];
 
 class Home extends Component {
-
   state = {
     redirect: false,
   }
@@ -43,7 +42,7 @@ class Home extends Component {
   }
 
   setRedirect = () => {
-    this.setState({ redirect: true })
+    this.setState({ redirect: true });
   }
 
   storeGroupUrl = (url) => {
@@ -57,29 +56,30 @@ class Home extends Component {
 
     return (
       <div className="Home page">
-        <h1>Austin's Favorite Meetups</h1>
-        {myMeetups.map((meetup, index) => {
+        <div className="overlay">
+          <h1>Austin's Favorite Meetups</h1>
+          {myMeetups.map((meetup, index) => {
+            // if there is no token, clicking a link will prompt
+            // user to sign in to meetup.com
+            const redirectLink = accessToken ?
+              <Link to={`/group/${meetup.url}`}>{meetup.title}</Link>
+              :
+              <a href={meetupAuthUrl} onClick={() => this.storeGroupUrl(meetup.url)}>{meetup.title}</a>;
 
-          // if there is no token, clicking a link will prompt
-          // user to sign in to meetup.com
-          const redirectLink = accessToken ? 
-            <Link to={`/group/${meetup.url}`}>{meetup.title}</Link>
-            : 
-            <a href={meetupAuthUrl} onClick={() => this.storeGroupUrl(meetup.url)}>{meetup.title}</a>;
+            // if redirect is true, then redirecto the the group
+            // found in session storage
+            // redirect is true if access token is in url
+            const meetupLink = this.state.redirect ?
+              <Redirect to={`/group/${sessionStorage.groupUrl}`} />
+              : redirectLink;
 
-          // if redirect is true, then redirecto the the group
-          // found in session storage
-          // redirect is true if access token is in url
-          const meetupLink = this.state.redirect ?
-            <Redirect to={`/group/${sessionStorage.groupUrl}`} />
-            : redirectLink;
-
-          return (
-            <div key={index}>
-              {meetupLink}
-            </div>
-          );
-        })}
+            return (
+              <div key={index}>
+                {meetupLink}
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }

@@ -3,7 +3,6 @@
 exports[`The Card Component should render correctly 1`] = `
 <div
   className="Card"
-  onClick={[Function]}
 >
   <div />
 </div>

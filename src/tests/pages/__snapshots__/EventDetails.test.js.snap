@@ -75,7 +75,6 @@ ShallowWrapper {
         </div>,
         <MemberCarousel
           members={Array []}
-          selectMember={[Function]}
         />,
       ],
       "className": "EventDetails",
@@ -271,7 +270,6 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "members": Array [],
-          "selectMember": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -331,7 +329,6 @@ ShallowWrapper {
           </div>,
           <MemberCarousel
             members={Array []}
-            selectMember={[Function]}
           />,
         ],
         "className": "EventDetails",
@@ -527,7 +524,6 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "members": Array [],
-            "selectMember": [Function],
           },
           "ref": null,
           "rendered": null,

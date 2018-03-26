@@ -11,7 +11,7 @@ import RouteRestrictor from '../shared/RouteRestrictor';
 
 const api = new Api();
 
-const { getMeetupData } = api;
+const { getMeetupData, getSimilarEvents } = api;
 
 const propTypes = {
   accessToken: PropTypes.string,
@@ -42,8 +42,15 @@ class Group extends Component {
     this.setState({ group });
   }
 
+  setSimilarEvents = (events) => {
+    console.log('SIMILAR EVENTS', events);
+  }
+
   loadData = (events) => {
-    this.setGroupInfo(events[0].group);
+    const { group } = events[0];
+    const { urlname } = group;
+    this.setGroupInfo(group);
+    getSimilarEvents(urlname, this.props.accessToken, this.setSimilarEvents);
     this.setState({ events });
   }
 

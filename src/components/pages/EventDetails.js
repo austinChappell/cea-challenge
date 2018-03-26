@@ -12,7 +12,7 @@ import mockEventData from '../../data/event_data';
 
 const api = new Api();
 
-const { getMeetupEvent, getMemberData } = api;
+const { getMeetupEvent } = api;
 
 const propTypes = {
   accessToken: PropTypes.string,
@@ -38,15 +38,6 @@ class EventDetails extends Component {
     } else {
       getMeetupEvent(groupName, eventId, accessToken, this.setEventData);
     }
-  }
-
-  getUser = (results) => {
-    console.log('user results', results);
-  }
-
-  selectMember = (id) => {
-    console.log('SELECTING MEMBER', id);
-    getMemberData(id, this.props.accessToken, this.getUser);
   }
 
   setEventData = (results) => {
@@ -89,7 +80,6 @@ class EventDetails extends Component {
         </div>
         <MemberCarousel
           members={this.state.rsvps}
-          selectMember={this.selectMember}
         />
       </div>
     );

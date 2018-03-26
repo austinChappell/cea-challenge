@@ -20,105 +20,33 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
+      "children": <div
+        className="overlay"
+      >
         <h1>
           Austin's Favorite Meetups
-        </h1>,
-        Array [
-          <div>
-            <Link
-              replace={false}
-              to="/group/ReactJS-Dallas"
-            >
-              React
-            </Link>
-          </div>,
-          <div>
-            <Link
-              replace={false}
-              to="/group/Nodeschool-Dallas"
-            >
-              NodeSchool
-            </Link>
-          </div>,
-        ],
-      ],
-      "className": "Home page",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Austin's Favorite Meetups",
-        },
-        "ref": null,
-        "rendered": "Austin's Favorite Meetups",
-        "type": "h1",
-      },
-      Object {
-        "instance": null,
-        "key": "0",
-        "nodeType": "host",
-        "props": Object {
-          "children": <Link
+        </h1>
+        <div>
+          <Link
             replace={false}
             to="/group/ReactJS-Dallas"
           >
             React
-          </Link>,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": "React",
-            "replace": false,
-            "to": "/group/ReactJS-Dallas",
-          },
-          "ref": null,
-          "rendered": "React",
-          "type": [Function],
-        },
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": "1",
-        "nodeType": "host",
-        "props": Object {
-          "children": <Link
+          </Link>
+        </div>
+        <div>
+          <Link
             replace={false}
             to="/group/Nodeschool-Dallas"
           >
             NodeSchool
-          </Link>,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": "NodeSchool",
-            "replace": false,
-            "to": "/group/Nodeschool-Dallas",
-          },
-          "ref": null,
-          "rendered": "NodeSchool",
-          "type": [Function],
-        },
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+          </Link>
+        </div>
+      </div>,
+      "className": "Home page",
+    },
+    "ref": null,
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
@@ -146,7 +74,7 @@ ShallowWrapper {
             </div>,
           ],
         ],
-        "className": "Home page",
+        "className": "overlay",
       },
       "ref": null,
       "rendered": Array [
@@ -218,6 +146,144 @@ ShallowWrapper {
           "type": "div",
         },
       ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="overlay"
+        >
+          <h1>
+            Austin's Favorite Meetups
+          </h1>
+          <div>
+            <Link
+              replace={false}
+              to="/group/ReactJS-Dallas"
+            >
+              React
+            </Link>
+          </div>
+          <div>
+            <Link
+              replace={false}
+              to="/group/Nodeschool-Dallas"
+            >
+              NodeSchool
+            </Link>
+          </div>
+        </div>,
+        "className": "Home page",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1>
+              Austin's Favorite Meetups
+            </h1>,
+            Array [
+              <div>
+                <Link
+                  replace={false}
+                  to="/group/ReactJS-Dallas"
+                >
+                  React
+                </Link>
+              </div>,
+              <div>
+                <Link
+                  replace={false}
+                  to="/group/Nodeschool-Dallas"
+                >
+                  NodeSchool
+                </Link>
+              </div>,
+            ],
+          ],
+          "className": "overlay",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Austin's Favorite Meetups",
+            },
+            "ref": null,
+            "rendered": "Austin's Favorite Meetups",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": <Link
+                replace={false}
+                to="/group/ReactJS-Dallas"
+              >
+                React
+              </Link>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "React",
+                "replace": false,
+                "to": "/group/ReactJS-Dallas",
+              },
+              "ref": null,
+              "rendered": "React",
+              "type": [Function],
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": <Link
+                replace={false}
+                to="/group/Nodeschool-Dallas"
+              >
+                NodeSchool
+              </Link>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "NodeSchool",
+                "replace": false,
+                "to": "/group/Nodeschool-Dallas",
+              },
+              "ref": null,
+              "rendered": "NodeSchool",
+              "type": [Function],
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
       "type": "div",
     },
   ],

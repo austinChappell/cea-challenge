@@ -18,11 +18,7 @@ class MemberCarousel extends Component {
         <h4>RSVP:</h4>
         <div className="slider">
           {members.map(member => (
-            <Card
-              key={member.id}
-              handleClick={selectMember}
-              returnValue={member.id}
-            >
+            <Card key={member.id}>
               <div>
                 <div className="member">
                   <div

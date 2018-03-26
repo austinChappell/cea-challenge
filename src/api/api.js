@@ -19,8 +19,8 @@ class Api {
     this.get(url, cb);
   }
 
-  getMemberData = (memberId, accessToken, cb) => {
-    const url = `https://api.meetup.com/2/member/${memberId}?&sign=true&photo-host=public&access_token=${accessToken}`;
+  getSimilarEvents = (groupName, accessToken, cb) => {
+    const url = `https://api.meetup.com/${groupName}/similar_groups?&sign=true&photo-host=public&access_token=${accessToken}`;
     this.get(url, cb);
   }
 }

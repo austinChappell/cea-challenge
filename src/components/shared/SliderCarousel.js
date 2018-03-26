@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-  children: PropTypes.arrayOf(PropTypes.array).isRequired,
+  children: PropTypes.arrayOf(PropTypes.any).isRequired,
   title: PropTypes.string,
 };
 

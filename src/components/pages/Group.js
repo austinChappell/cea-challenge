@@ -140,7 +140,7 @@ class Group extends Component {
             />
             ))}
         </div>
-        <SliderCarousel>
+        <SliderCarousel title="Similar Groups">
           {this.state.similarGroups.map((g) => {
             const photo = g.key_photo ?
             (

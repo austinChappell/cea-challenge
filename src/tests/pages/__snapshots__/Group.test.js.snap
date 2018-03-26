@@ -42,7 +42,7 @@ ShallowWrapper {
           className="events"
         />,
         <SliderCarousel
-          title={null}
+          title="Similar Groups"
         >
           ;
         </SliderCarousel>,
@@ -98,7 +98,7 @@ ShallowWrapper {
             Array [],
             ";",
           ],
-          "title": null,
+          "title": "Similar Groups",
         },
         "ref": null,
         "rendered": Array [
@@ -130,7 +130,7 @@ ShallowWrapper {
             className="events"
           />,
           <SliderCarousel
-            title={null}
+            title="Similar Groups"
           >
             ;
           </SliderCarousel>,
@@ -186,7 +186,7 @@ ShallowWrapper {
               Array [],
               ";",
             ],
-            "title": null,
+            "title": "Similar Groups",
           },
           "ref": null,
           "rendered": Array [

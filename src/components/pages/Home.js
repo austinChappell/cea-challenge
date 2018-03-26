@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
@@ -12,6 +13,16 @@ const myMeetups = [
     url: 'Nodeschool-Dallas',
   },
 ];
+
+const propTypes = {
+  accessToken: PropTypes.string,
+  location: PropTypes.objectOf(PropTypes.any).isRequired,
+  setAccessToken: PropTypes.func.isRequired,
+};
+
+const defaultProps = {
+  accessToken: null,
+};
 
 class Home extends Component {
   state = {
@@ -52,7 +63,6 @@ class Home extends Component {
   render() {
     const { accessToken } = this.props;
     const meetupAuthUrl = `https://secure.meetup.com/oauth2/authorize?client_id=${process.env.REACT_APP_MEETUP_CONSUMER_KEY}&response_type=token&redirect_uri=${process.env.REACT_APP_MEETUP_REDIRECT_URI}`;
-    const groupUrl = sessionStorage.getItem('groupUrl');
 
     return (
       <div className="Home page">
@@ -63,9 +73,16 @@ class Home extends Component {
               // if there is no token, clicking a link will prompt
               // user to sign in to meetup.com
               const redirectLink = accessToken ?
-                <Link to={`/group/${meetup.url}`}>{meetup.title}</Link>
+                (
+                  <Link
+                    href={`/group/${meetup.url}`}
+                    to={`/group/${meetup.url}`}
+                  >
+                    {meetup.title}
+                  </Link>
+                )
                 :
-                <a href={meetupAuthUrl} onClick={() => this.storeGroupUrl(meetup.url)}>{meetup.title}</a>;
+                  <a href={meetupAuthUrl} onClick={() => this.storeGroupUrl(meetup.url)}>{meetup.title}</a>;
 
               // if redirect is true, then redirecto the the group
               // found in session storage
@@ -97,5 +114,8 @@ const mapDispatchToProps = dispatch => ({
     dispatch(action);
   },
 });
+
+Home.propTypes = propTypes;
+Home.defaultProps = defaultProps;
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

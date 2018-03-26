@@ -63,9 +63,11 @@ class Group extends Component {
 
   loadData = (events) => {
     const { group } = events.length > 0 ? events[0] : {};
-    const { urlname } = group;
-    this.setGroupInfo(group);
-    getSimilarGroups(urlname, this.props.accessToken, this.setSimilarGroups);
+    if (group) {
+      const { urlname } = group;
+      this.setGroupInfo(group);
+      getSimilarGroups(urlname, this.props.accessToken, this.setSimilarGroups);
+    }
     this.setState({ events });
   }
 

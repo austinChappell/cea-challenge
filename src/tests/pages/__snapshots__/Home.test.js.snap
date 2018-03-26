@@ -33,6 +33,7 @@ ShallowWrapper {
             className="meetup"
           >
             <Link
+              href="/group/ReactJS-Dallas"
               replace={false}
               to="/group/ReactJS-Dallas"
             >
@@ -43,6 +44,7 @@ ShallowWrapper {
             className="meetup"
           >
             <Link
+              href="/group/Nodeschool-Dallas"
               replace={false}
               to="/group/Nodeschool-Dallas"
             >
@@ -70,6 +72,7 @@ ShallowWrapper {
               className="meetup"
             >
               <Link
+                href="/group/ReactJS-Dallas"
                 replace={false}
                 to="/group/ReactJS-Dallas"
               >
@@ -80,6 +83,7 @@ ShallowWrapper {
               className="meetup"
             >
               <Link
+                href="/group/Nodeschool-Dallas"
                 replace={false}
                 to="/group/Nodeschool-Dallas"
               >
@@ -113,6 +117,7 @@ ShallowWrapper {
                 className="meetup"
               >
                 <Link
+                  href="/group/ReactJS-Dallas"
                   replace={false}
                   to="/group/ReactJS-Dallas"
                 >
@@ -123,6 +128,7 @@ ShallowWrapper {
                 className="meetup"
               >
                 <Link
+                  href="/group/Nodeschool-Dallas"
                   replace={false}
                   to="/group/Nodeschool-Dallas"
                 >
@@ -140,6 +146,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <Link
+                  href="/group/ReactJS-Dallas"
                   replace={false}
                   to="/group/ReactJS-Dallas"
                 >
@@ -154,6 +161,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "children": "React",
+                  "href": "/group/ReactJS-Dallas",
                   "replace": false,
                   "to": "/group/ReactJS-Dallas",
                 },
@@ -169,6 +177,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <Link
+                  href="/group/Nodeschool-Dallas"
                   replace={false}
                   to="/group/Nodeschool-Dallas"
                 >
@@ -183,6 +192,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "children": "NodeSchool",
+                  "href": "/group/Nodeschool-Dallas",
                   "replace": false,
                   "to": "/group/Nodeschool-Dallas",
                 },
@@ -219,6 +229,7 @@ ShallowWrapper {
               className="meetup"
             >
               <Link
+                href="/group/ReactJS-Dallas"
                 replace={false}
                 to="/group/ReactJS-Dallas"
               >
@@ -229,6 +240,7 @@ ShallowWrapper {
               className="meetup"
             >
               <Link
+                href="/group/Nodeschool-Dallas"
                 replace={false}
                 to="/group/Nodeschool-Dallas"
               >
@@ -256,6 +268,7 @@ ShallowWrapper {
                 className="meetup"
               >
                 <Link
+                  href="/group/ReactJS-Dallas"
                   replace={false}
                   to="/group/ReactJS-Dallas"
                 >
@@ -266,6 +279,7 @@ ShallowWrapper {
                 className="meetup"
               >
                 <Link
+                  href="/group/Nodeschool-Dallas"
                   replace={false}
                   to="/group/Nodeschool-Dallas"
                 >
@@ -299,6 +313,7 @@ ShallowWrapper {
                   className="meetup"
                 >
                   <Link
+                    href="/group/ReactJS-Dallas"
                     replace={false}
                     to="/group/ReactJS-Dallas"
                   >
@@ -309,6 +324,7 @@ ShallowWrapper {
                   className="meetup"
                 >
                   <Link
+                    href="/group/Nodeschool-Dallas"
                     replace={false}
                     to="/group/Nodeschool-Dallas"
                   >
@@ -326,6 +342,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <Link
+                    href="/group/ReactJS-Dallas"
                     replace={false}
                     to="/group/ReactJS-Dallas"
                   >
@@ -340,6 +357,7 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "children": "React",
+                    "href": "/group/ReactJS-Dallas",
                     "replace": false,
                     "to": "/group/ReactJS-Dallas",
                   },
@@ -355,6 +373,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <Link
+                    href="/group/Nodeschool-Dallas"
                     replace={false}
                     to="/group/Nodeschool-Dallas"
                   >
@@ -369,6 +388,7 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "children": "NodeSchool",
+                    "href": "/group/Nodeschool-Dallas",
                     "replace": false,
                     "to": "/group/Nodeschool-Dallas",
                   },

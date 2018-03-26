@@ -12,6 +12,7 @@ module.exports = {
         expect: true,
         fetch: true,
         it: true,
+        sessionStorage: true,
         window: true,
     },
     parser: 'babel-eslint',

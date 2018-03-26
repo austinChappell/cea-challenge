@@ -14,7 +14,7 @@ const initialState = {
 };
 
 const props = {
-  history: [],
+  history: {},
   match: {
     params: {},
   },

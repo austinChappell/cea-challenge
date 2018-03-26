@@ -15,7 +15,7 @@ const { getMeetupData } = api;
 
 const propTypes = {
   accessToken: PropTypes.string,
-  history: PropTypes.arrayOf(PropTypes.object).isRequired,
+  history: PropTypes.objectOf(PropTypes.any).isRequired,
   match: PropTypes.objectOf(PropTypes.any).isRequired,
   selectEvent: PropTypes.func.isRequired,
 };

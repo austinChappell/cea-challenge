@@ -16,6 +16,10 @@ const myMeetups = [
     title: 'Match',
     url: 'Match-technology-presents',
   },
+  {
+    title: 'Hiking w/ Geeks',
+    url: 'Hiking-with-Geeks-Dallas',
+  },
 ];
 
 const propTypes = {

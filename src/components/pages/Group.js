@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import moment from 'moment';
 
 import Api from '../../api/api';
 import mockData from '../../data/data';
@@ -13,52 +13,59 @@ const api = new Api();
 
 const { getMeetupData } = api;
 
+const propTypes = {
+  accessToken: PropTypes.string,
+  history: PropTypes.arrayOf(PropTypes.object).isRequired,
+  match: PropTypes.objectOf(PropTypes.any).isRequired,
+  selectEvent: PropTypes.func.isRequired,
+};
+
+const defaultProps = {
+  accessToken: null,
+};
+
 class Group extends Component {
   state = {
-    authorized: false,
     events: [],
     group: '',
   }
 
   componentWillMount() {
-    const { match } = this.props;
-    const { groupName } = match.params;
     if (process.env.REACT_APP_ENV === 'development') {
-      this.loadMockData()
+      this.loadMockData();
     } else {
       this.loadPage();
     }
   }
 
+  setGroupInfo = (group) => {
+    this.setState({ group });
+  }
+
   loadData = (events) => {
-    this.setGroupInfo(events[0].group)
-    this.setState({ events })
+    this.setGroupInfo(events[0].group);
+    this.setState({ events });
   }
 
   loadMockData = () => {
-    this.setGroupInfo(mockData[0].group)
-    this.setState({ authorized: true, events: mockData })
+    this.setGroupInfo(mockData[0].group);
+    this.setState({ events: mockData });
   }
 
   loadPage = () => {
     const { accessToken, match } = this.props;
     const { groupName } = match.params;
-    const authorized = accessToken ? true : false;
+    const authorized = !!accessToken;
     if (authorized && process.env.REACT_APP_ENV !== 'development') {
-      getMeetupData(groupName, accessToken, this.loadData)
+      getMeetupData(groupName, accessToken, this.loadData);
     }
-    this.setState({ authorized })
-  }
-
-  setGroupInfo = (group) => {
-    this.setState({ group })
   }
 
   selectEvent = (selectedEvent) => {
     const { id, group } = selectedEvent;
     const selectedEventURL = `/group/${group.urlname}/event/${id}`;
     this.props.selectEvent(selectedEvent);
-    this.props.history.push(selectedEventURL)
+    this.props.history.push(selectedEventURL);
   }
 
   render() {
@@ -80,20 +87,18 @@ class Group extends Component {
           title={this.state.group.name}
         />
         <div className="events">
-          {this.state.events.map((event, index) => {
-            return (
-              <Event
-                key={index}
-                event={event}
-                selectEvent={this.selectEvent}
-              />
-            )
-          })}
+          {this.state.events.map(event => (
+            <Event
+              key={event.id}
+              event={event}
+              selectEvent={this.selectEvent}
+            />
+            ))}
         </div>
       </div>
-    )
+    );
   }
-} 
+}
 
 const mapStateToProps = state => ({
   accessToken: state.generalReducer.accessToken,
@@ -103,7 +108,10 @@ const mapDispatchToProps = dispatch => ({
   selectEvent: (selectedEvent) => {
     const action = { type: 'SELECT_EVENT', selectedEvent };
     dispatch(action);
-  }
-})
+  },
+});
+
+Group.propTypes = propTypes;
+Group.defaultProps = defaultProps;
 
 export default connect(mapStateToProps, mapDispatchToProps)(Group);

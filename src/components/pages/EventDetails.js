@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import moment from 'moment';
 
@@ -13,37 +14,46 @@ const api = new Api();
 
 const { getMeetupEvent } = api;
 
+const propTypes = {
+  accessToken: PropTypes.string,
+  match: PropTypes.objectOf(PropTypes.any).isRequired,
+  selectedEvent: PropTypes.objectOf(PropTypes.any),
+};
+
+const defaultProps = {
+  accessToken: null,
+  selectedEvent: null,
+};
+
 class EventDetails extends Component {
   state = {
-    rsvps: []
+    rsvps: [],
   }
 
   componentDidMount() {
-    console.log('EVENT DETAILS PROPS', this.props)
     const { accessToken, match } = this.props;
     const { eventId, groupName } = match.params;
     if (process.env.REACT_APP_ENV === 'development') {
-      this.setEventData(mockEventData)
+      this.setEventData(mockEventData);
     } else {
-      getMeetupEvent(groupName, eventId, accessToken, this.setEventData)
+      getMeetupEvent(groupName, eventId, accessToken, this.setEventData);
     }
   }
 
   setEventData = (results) => {
     const rsvps = results.map((r => r.member));
-    this.setState({ rsvps })
+    this.setState({ rsvps });
   }
 
   render() {
     const { selectedEvent } = this.props;
     const { name } = selectedEvent;
-    console.log('SELECTED EVENT', name)
     const countDownMessage = `Until the ${name} Meetup`;
-    console.log('COUNTDOWN MESSAGE', countDownMessage)
+
     return (
       <div className="EventDetails">
         <RouteRestrictor />
-        <Banner 
+        <Banner
           countDownMessage={countDownMessage}
           nextEventTime={selectedEvent.time}
           subTitle={selectedEvent.name}
@@ -66,17 +76,20 @@ class EventDetails extends Component {
         </div>
         <div>
           <h4>Details:</h4>
-          <div dangerouslySetInnerHTML={{ __html: selectedEvent.description }}></div>
+          <div dangerouslySetInnerHTML={{ __html: selectedEvent.description }} />
         </div>
         <MemberCarousel members={this.state.rsvps} />
       </div>
     );
   }
-};
+}
 
 const mapStateToProps = state => ({
   accessToken: state.generalReducer.accessToken,
   selectedEvent: state.eventReducer.selectedEvent,
 });
+
+EventDetails.propTypes = propTypes;
+EventDetails.defaultProps = defaultProps;
 
 export default connect(mapStateToProps)(EventDetails);

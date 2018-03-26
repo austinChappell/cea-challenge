@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Group Component should render correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Group
+    accessToken="fakeToken"
+    history={Array []}
+    match={
+      Object {
+        "params": Object {},
+      }
+    }
+    selectEvent={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Connect(RouteRestrictor) />,
+        <Banner
+          countDownMessage="Until the next undefined Meetup"
+          goBackButton={true}
+          goBackRoute="/"
+          goBackText="Back to Home Page"
+          nextEventTime={null}
+          subTitle="Devvin' it up since NaN"
+          title={undefined}
+        />,
+        <div
+          className="events"
+        />,
+      ],
+      "className": "Group page",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "countDownMessage": "Until the next undefined Meetup",
+          "goBackButton": true,
+          "goBackRoute": "/",
+          "goBackText": "Back to Home Page",
+          "nextEventTime": null,
+          "subTitle": "Devvin' it up since NaN",
+          "title": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [],
+          "className": "events",
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Connect(RouteRestrictor) />,
+          <Banner
+            countDownMessage="Until the next undefined Meetup"
+            goBackButton={true}
+            goBackRoute="/"
+            goBackText="Back to Home Page"
+            nextEventTime={null}
+            subTitle="Devvin' it up since NaN"
+            title={undefined}
+          />,
+          <div
+            className="events"
+          />,
+        ],
+        "className": "Group page",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "countDownMessage": "Until the next undefined Meetup",
+            "goBackButton": true,
+            "goBackRoute": "/",
+            "goBackText": "Back to Home Page",
+            "nextEventTime": null,
+            "subTitle": "Devvin' it up since NaN",
+            "title": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [],
+            "className": "events",
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "context": Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+    },
+  },
+}
+`;

@@ -40,7 +40,9 @@ ShallowWrapper {
         <div
           className="events"
         />,
-        <SliderCarousel>
+        <SliderCarousel
+          title={null}
+        >
           ;
         </SliderCarousel>,
       ],
@@ -95,6 +97,7 @@ ShallowWrapper {
             Array [],
             ";",
           ],
+          "title": null,
         },
         "ref": null,
         "rendered": Array [
@@ -125,7 +128,9 @@ ShallowWrapper {
           <div
             className="events"
           />,
-          <SliderCarousel>
+          <SliderCarousel
+            title={null}
+          >
             ;
           </SliderCarousel>,
         ],
@@ -180,6 +185,7 @@ ShallowWrapper {
               Array [],
               ";",
             ],
+            "title": null,
           },
           "ref": null,
           "rendered": Array [

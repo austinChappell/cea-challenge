@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element).isRequired,
-  title: PropTypes.string.isRequired,
+  children: PropTypes.arrayOf(PropTypes.array).isRequired,
+  title: PropTypes.string,
+};
+
+const defaultProps = {
+  title: null,
 };
 
 class SliderCarousel extends Component {
@@ -21,5 +25,6 @@ class SliderCarousel extends Component {
 }
 
 SliderCarousel.propTypes = propTypes;
+SliderCarousel.defaultProps = defaultProps;
 
 export default SliderCarousel;

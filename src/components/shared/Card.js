@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const propTypes = {
   children: PropTypes.element.isRequired,
   handleClick: PropTypes.func,
-  returnValue: PropTypes.number,
+  returnValue: PropTypes.objectOf(PropTypes.any),
 };
 
 const defaultProps = {

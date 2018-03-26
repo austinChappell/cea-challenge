@@ -5,6 +5,7 @@ import { shallowToJson } from 'enzyme-to-json';
 import SliderCarousel from '../../components/shared/SliderCarousel';
 
 const props = {
+  children: [],
   members: [],
 };
 

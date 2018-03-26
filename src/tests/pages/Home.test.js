@@ -13,6 +13,11 @@ const initialState = {
 const middlewares = [];
 const mockStore = configureStore(middlewares);
 
+const props = {
+  location: {},
+  setAccessToken: () => {},
+};
+
 describe('The Home Component', () => {
   it('should render correctly', () => {
     const options = {
@@ -20,7 +25,7 @@ describe('The Home Component', () => {
         store: mockStore(initialState),
       },
     };
-    const wrapper = shallow(<Home />, options);
+    const wrapper = shallow(<Home {...props} />, options);
     expect(wrapper.dive()).toMatchSnapshot();
   });
 });

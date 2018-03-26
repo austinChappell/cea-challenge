@@ -39,13 +39,15 @@ ShallowWrapper {
           title={null}
         />,
         <div
-          className="events"
-        />,
-        <SliderCarousel
-          title="Similar Groups"
+          className="details"
         >
-          ;
-        </SliderCarousel>,
+          <div
+            className="events"
+          />
+          <SliderCarousel
+            title="Similar Groups"
+          />
+        </div>,
       ],
       "className": "Group page",
     },
@@ -82,29 +84,44 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [],
-          "className": "events",
-        },
-        "ref": null,
-        "rendered": Array [],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
           "children": Array [
-            Array [],
-            ";",
+            <div
+              className="events"
+            />,
+            <SliderCarousel
+              title="Similar Groups"
+            />,
           ],
-          "title": "Similar Groups",
+          "className": "details",
         },
         "ref": null,
         "rendered": Array [
-          ";",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [],
+              "className": "events",
+            },
+            "ref": null,
+            "rendered": Array [],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [],
+              "title": "Similar Groups",
+            },
+            "ref": null,
+            "rendered": Array [],
+            "type": [Function],
+          },
         ],
-        "type": [Function],
+        "type": "div",
       },
     ],
     "type": "div",
@@ -127,13 +144,15 @@ ShallowWrapper {
             title={null}
           />,
           <div
-            className="events"
-          />,
-          <SliderCarousel
-            title="Similar Groups"
+            className="details"
           >
-            ;
-          </SliderCarousel>,
+            <div
+              className="events"
+            />
+            <SliderCarousel
+              title="Similar Groups"
+            />
+          </div>,
         ],
         "className": "Group page",
       },
@@ -170,29 +189,44 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [],
-            "className": "events",
-          },
-          "ref": null,
-          "rendered": Array [],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
             "children": Array [
-              Array [],
-              ";",
+              <div
+                className="events"
+              />,
+              <SliderCarousel
+                title="Similar Groups"
+              />,
             ],
-            "title": "Similar Groups",
+            "className": "details",
           },
           "ref": null,
           "rendered": Array [
-            ";",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [],
+                "className": "events",
+              },
+              "ref": null,
+              "rendered": Array [],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [],
+                "title": "Similar Groups",
+              },
+              "ref": null,
+              "rendered": Array [],
+              "type": [Function],
+            },
           ],
-          "type": [Function],
+          "type": "div",
         },
       ],
       "type": "div",

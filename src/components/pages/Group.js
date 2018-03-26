@@ -64,7 +64,9 @@ class Group extends Component {
   }
 
   clearStorage = () => {
-    sessionStorage.removeItem('groupName');
+    // remove the group url from storage to allow
+    // home page refresh in the future
+    sessionStorage.removeItem('groupUrl');
   }
 
   initialize = () => {

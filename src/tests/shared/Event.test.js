@@ -11,6 +11,7 @@ const props = {
     time: 1522030848733,
     yes_rsvp_count: 40,
   },
+  selectEvent: () => {},
 };
 
 describe('The Event Component', () => {

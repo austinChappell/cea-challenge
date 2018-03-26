@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment';
+import moment from 'moment-timezone';
 
 import Card from './Card';
 
@@ -24,7 +24,7 @@ const Event = (props) => {
     <Card>
       <div className="Event">
         <h4>{name}</h4>
-        <h6>{moment(time).format('MMMM Do YYYY, h:mm a')}</h6>
+        <h6>{moment.tz(time, 'America/Chicago').format('MMMM Do YYYY, h:mm a')}</h6>
         <h6>{rsvp} going</h6>
         <h6>{rsvpLimit - rsvp} spots remaining</h6>
         <button onClick={() => selectEvent(event)}>

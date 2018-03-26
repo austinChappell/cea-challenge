@@ -20,8 +20,8 @@
     "redux-mock-store": "^1.5.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts build",
+    "dev": "react-scripts start",
     "test": "jest",
     "test-dev": "jest --watch",
     "eject": "react-scripts eject",

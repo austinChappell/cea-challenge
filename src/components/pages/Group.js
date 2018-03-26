@@ -42,12 +42,15 @@ class Group extends Component {
 
   componentDidMount() {
     this.initialize();
+    this.clearStorage();
   }
 
   componentDidUpdate(prevProps) {
     const prevGroupName = prevProps.match.params.groupName;
     const thisGroupName = this.props.match.params.groupName;
-    if (prevGroupName !== thisGroupName) {
+    const prevToken = prevProps.accessToken;
+    const thisToken = this.props.accessToken;
+    if (prevGroupName !== thisGroupName || prevToken !== thisToken) {
       this.initialize();
     }
   }
@@ -58,6 +61,10 @@ class Group extends Component {
 
   setSimilarGroups = (similarGroups) => {
     this.setState({ similarGroups });
+  }
+
+  clearStorage = () => {
+    sessionStorage.removeItem('groupName');
   }
 
   initialize = () => {

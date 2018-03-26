@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The App Component should render correctly 1`] = `
+<div
+  className="App"
+>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <BrowserRouter>
+      <Switch>
+        <Route
+          component={[Function]}
+          path="/group/:groupName/event/:eventId"
+        />
+        <Route
+          component={[Function]}
+          path="/group/:groupName"
+        />
+        <Route
+          component={[Function]}
+          path="/"
+        />
+      </Switch>
+    </BrowserRouter>
+  </Provider>
+</div>
+`;

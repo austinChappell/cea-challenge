@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Event Component should render correctly 1`] = `
+<Card>
+  <div
+    className="Event"
+  >
+    <h4>
+      ReactJs Dallas
+    </h4>
+    <h6>
+      March 25th 2018, 9:20 pm
+    </h6>
+    <h6>
+      40
+       going
+    </h6>
+    <h6>
+      0
+       spots remaining
+    </h6>
+    <button
+      onClick={[Function]}
+    >
+      Learn More
+    </button>
+  </div>
+</Card>
+`;

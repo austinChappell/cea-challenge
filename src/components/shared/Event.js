@@ -1,7 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import moment from 'moment';
 
 import Card from './Card';
+
+const propTypes = {
+  event: PropTypes.objectOf(PropTypes.any).isRequired,
+  selectEvent: PropTypes.func.isRequired,
+};
 
 const Event = (props) => {
   const {
@@ -28,5 +34,7 @@ const Event = (props) => {
     </Card>
   );
 };
+
+Event.propTypes = propTypes;
 
 export default Event;

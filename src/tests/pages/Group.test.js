@@ -9,7 +9,7 @@ const mockStore = configureStore(middlewares);
 
 const initialState = {
   generalReducer: {
-    // accessToken: 'fakeToken',
+    accessToken: 'fakeToken',
   },
 };
 

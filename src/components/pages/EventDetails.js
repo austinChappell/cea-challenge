@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import moment from 'moment-timezone';
 
+import actions from '../../store/actions';
+import Api from '../../api/api';
+import mockEventData from '../../data/event_data';
+
 import Banner from '../shared/Banner';
 import Card from '../shared/Card';
 import RouteRestrictor from '../shared/RouteRestrictor';
 import SliderCarousel from '../shared/SliderCarousel';
-
-import Api from '../../api/api';
-import mockEventData from '../../data/event_data';
 
 const api = new Api();
 
@@ -19,6 +20,7 @@ const propTypes = {
   accessToken: PropTypes.string,
   match: PropTypes.objectOf(PropTypes.any).isRequired,
   selectedEvent: PropTypes.objectOf(PropTypes.any),
+  setAccessToken: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
@@ -115,8 +117,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   setAccessToken: (accessToken) => {
-    const action = { type: 'SET_ACCESS_TOKEN', accessToken };
-    dispatch(action);
+    dispatch(actions.setAccessToken(accessToken));
   },
 });
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+import actions from '../../store/actions';
 import Api from '../../api/api';
 import mockData from '../../data/data';
 
@@ -20,6 +21,7 @@ const propTypes = {
   history: PropTypes.objectOf(PropTypes.any).isRequired,
   match: PropTypes.objectOf(PropTypes.any).isRequired,
   selectEvent: PropTypes.func.isRequired,
+  setAccessToken: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
@@ -178,13 +180,11 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   setAccessToken: (accessToken) => {
-    const action = { type: 'SET_ACCESS_TOKEN', accessToken };
-    dispatch(action);
+    dispatch(actions.setAccessToken(accessToken));
   },
 
   selectEvent: (selectedEvent) => {
-    const action = { type: 'SELECT_EVENT', selectedEvent };
-    dispatch(action);
+    dispatch(actions.selectEvent(selectedEvent));
   },
 });
 

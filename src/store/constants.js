@@ -1,0 +1,4 @@
+export default {
+  SELECT_EVENT: 'SELECT_EVENT',
+  SET_ACCESS_TOKEN: 'SET_ACCESS_TOKEN',
+};

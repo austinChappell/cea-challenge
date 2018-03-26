@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import actions from '../../store/actions';
+
 const myMeetups = [
   {
     title: 'React',
@@ -133,8 +135,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   setAccessToken: (accessToken) => {
-    const action = { type: 'SET_ACCESS_TOKEN', accessToken };
-    dispatch(action);
+    dispatch(actions.setAccessToken(accessToken));
   },
 });
 

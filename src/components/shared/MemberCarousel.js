@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Card from './Card';
+
+const propTypes = {
+  members: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 class MemberCarousel extends Component {
   state = {}
@@ -29,5 +34,7 @@ class MemberCarousel extends Component {
     );
   }
 }
+
+MemberCarousel.propTypes = propTypes;
 
 export default MemberCarousel;

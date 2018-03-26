@@ -60,6 +60,7 @@ class Home extends Component {
         }
       }
     }
+    window.scroll(0, 0);
   }
 
   componentWillUpdate(nextProps) {

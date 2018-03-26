@@ -77,6 +77,7 @@ class Group extends Component {
     } else {
       this.loadPage();
     }
+    window.scroll(0, 0);
   }
 
   loadData = (events) => {

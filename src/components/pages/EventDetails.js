@@ -48,6 +48,7 @@ class EventDetails extends Component {
     } else {
       getMeetupEvent(groupName, eventId, accessToken, this.setEventData);
     }
+    window.scroll(0, 0);
   }
 
   setEventData = (results) => {

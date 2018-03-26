@@ -10,3 +10,7 @@ global.sessionStorage = {
   removeItem: () => {},
   setItem: () => {},
 };
+
+global.window = {
+  scroll: () => {},
+};

@@ -2,7 +2,7 @@
 
 exports[`The Event Component should render correctly 1`] = `
 <Card
-  handleClick={null}
+  handleClick={[Function]}
   returnValue={null}
 >
   <div

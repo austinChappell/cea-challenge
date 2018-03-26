@@ -8,7 +8,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  handleClick: null,
+  handleClick: () => {},
   returnValue: null,
 };
 

@@ -49,7 +49,7 @@ ShallowWrapper {
           </h4>
           <div>
             <p>
-              March 25th, 2018, 9:08 pm
+              March 25th, 2018, 9:10 pm
             </p>
           </div>
         </div>,
@@ -161,7 +161,7 @@ ShallowWrapper {
             </h4>,
             <div>
               <p>
-                March 25th, 2018, 9:08 pm
+                March 25th, 2018, 9:10 pm
               </p>
             </div>,
           ],
@@ -185,7 +185,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <p>
-                March 25th, 2018, 9:08 pm
+                March 25th, 2018, 9:10 pm
               </p>,
             },
             "ref": null,
@@ -194,10 +194,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "March 25th, 2018, 9:08 pm",
+                "children": "March 25th, 2018, 9:10 pm",
               },
               "ref": null,
-              "rendered": "March 25th, 2018, 9:08 pm",
+              "rendered": "March 25th, 2018, 9:10 pm",
               "type": "p",
             },
             "type": "div",
@@ -295,7 +295,7 @@ ShallowWrapper {
             </h4>
             <div>
               <p>
-                March 25th, 2018, 9:08 pm
+                March 25th, 2018, 9:10 pm
               </p>
             </div>
           </div>,
@@ -407,7 +407,7 @@ ShallowWrapper {
               </h4>,
               <div>
                 <p>
-                  March 25th, 2018, 9:08 pm
+                  March 25th, 2018, 9:10 pm
                 </p>
               </div>,
             ],
@@ -431,7 +431,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <p>
-                  March 25th, 2018, 9:08 pm
+                  March 25th, 2018, 9:10 pm
                 </p>,
               },
               "ref": null,
@@ -440,10 +440,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "March 25th, 2018, 9:08 pm",
+                  "children": "March 25th, 2018, 9:10 pm",
                 },
                 "ref": null,
-                "rendered": "March 25th, 2018, 9:08 pm",
+                "rendered": "March 25th, 2018, 9:10 pm",
                 "type": "p",
               },
               "type": "div",
